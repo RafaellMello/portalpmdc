@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PMDC - Conteúdos</title>
+        
+        <style>
+            @font-face {
+                font-family: 'AaltoSansEssentialLight';
+                src: url('AaltoSansEssential.ttf') format('truetype');
+                font-display: swap;
+            }
+
+            .option-card {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .option-card a.process-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: inherit;
+                z-index: 1;
+            }
+
+            .option-card i {
+                position: relative;
+                z-index: 2;
+            }
+
+            .option-card h2 {
+                position: relative;
+                z-index: 2;
+            }
+        </style>
+        
+        <link rel="icon" type="image/png" href="logofavicon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="tel:2127736200">(21) 2773-6200</a>
+            <a href="#">Portal da Prefeitura</a>
+            <a href="#">Portal da Saúde</a>
+            <a href="#">Câmara Municipal</a>
+            <a href="#">Ouvidoria</a>
+            <a href="#">Versão anterior</a>
+            <a href="#">Mapa do site</a>
+            <a href="#">Identidade Visual</a>
+            <a href="#">Alto contraste</a>
+        </div>
+    </div>
+
+    <nav class="main-menu">
+        <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
+        <a href="http://127.0.0.1:5500/sitee.html#">Home</a>
+        <a href="http://127.0.0.1:5500/siteatendimento.html">Atendimento</a>
+        <a href="#">Organograma</a>
+        <a href="#">Boletim Oficial</a>
+        <a href="http://127.0.0.1:5500/siteconteudo.html">Conteúdos</a>
+        <a href="#">Secretarias</a>
+        <a href="#">Balanços</a>
+        <a href="#">Notícias</a>
+        <a href="#">Perguntas Frequentes</a>
+        <a href="#">Fale conosco</a>
+    </nav>
+
+    <div class="page-title">
+        <h1>Conteúdos</h1>
+        
+    </div>
+
+    <div class="search-container">
+        <form class="search-form" onsubmit="return false;">
+            <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar..." oninput="filterOptions()">
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+    
+    <div class="grid-container" id="optionsGrid">
+        <div class="option-card" data-search="receitas municipais arrecadacao">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-money-bill"></i>
+                <h2>Receitas</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="despesas gastos municipais">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-dollar-sign"></i>
+                <h2>Despesas</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="patrimonios bens municipais">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-building"></i>
+                <h2>Patrimônios</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="termos contratos documentos">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-briefcase"></i>
+                <h2>Termos e Contratos</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="orcamento planejamento">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-chart-bar"></i>
+                <h2>Orçamento</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="licitacoes processos">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-file-alt"></i>
+                <h2>Licitações</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="autarquias orgaos">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-book"></i>
+                <h2>Autarquias</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="fundos municipais">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-university"></i>
+                <h2>Fundos Municipais</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="plano plurianual ppa">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-flag"></i>
+                <h2>Plano Plurianual</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="divida ativa cobranca">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-percent"></i>
+                <h2>Dívida Ativa</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="convenios governo federal">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-cubes"></i>
+                <h2>Conv. Governo Federal</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="siafic decreto federal">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-file-alt"></i>
+                <h2>SIAFIC - DECRETO FEDERAL 10.540/20</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="relatorios lrf">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-chart-line"></i>
+                <h2>Relatórios-LRF</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="recursos financeiros">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-credit-card"></i>
+                <h2>Recursos Financeiros</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="remuneracao servidores">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-users"></i>
+                <h2>Rem. dos Servidores</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="gastos diarias">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-file-invoice"></i>
+                <h2>Gastos com Diárias</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="pesquisas leis">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-gavel"></i>
+                <h2>Pesquisas de Leis</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="escolas municipais educacao">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Escolas Municipais</h2>
+            </a>
+        </div>
+        <div class="option-card" data-search="gastos diarias">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-file-invoice"></i>
+                <h2>Gastos com Diárias</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="pesquisas leis">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-gavel"></i>
+                <h2>Pesquisas de Leis</h2>
+            </a>
+        </div>
+
+        <div class="option-card" data-search="escolas municipais educacao">
+            <a href="#" class="process-link" target="_blank">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Escolas Municipais</h2>
+            </a>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONTEÚDOS</h3>
+                <a href="#">Ata Registro de Preço</a>
+                <a href="#">Autarquias</a>
+                <a href="#">Cadastro de Fornecedores</a>
+                <a href="#">Central de Regulação Saúde</a>
+                <a href="#">Conselho Municipal de Saúde</a>
+                <a href="#">Conv. Governo Federal</a>
+                <a href="#">COVID-19</a>
+                <a href="#">Dados Abertos</a>
+                <a href="#">Despesas</a>
+                <a href="#">Despesas com recursos da CEDAE</a>
+                <a href="#">Dívida Ativa</a>
+                <a href="#">Escolas Municipais</a>
+                <a href="#">Estatísticas de Acesso</a>
+                <a href="#">Fundos Municipais</a>
+                <a href="#">Gastos com Diárias</a>
+                <a href="#">Leis de Acesso a Informação</a>
+                <a href="#">LGPD</a>
+                <a href="#">Licitações</a>
+                <a href="#">Obras Públicas</a>
+                <a href="#">Orçamento</a>
+                <a href="#">Ouvidoria</a>
+                <a href="#">Patrimônios</a>
+                <a href="#">PDDE</a>
+                <a href="#">Pesquisas de Leis</a>
+                <a href="#">Plano Plurianual</a>
+                <a href="#">Prestação de Contas</a>
+                <a href="#">Radar da Transparência</a>
+                <a href="#">Receitas</a>
+                <a href="#">Recursos Financeiros</a>
+                <a href="#">Relatórios-LRF</a>
+                <a href="#">Rem. dos Servidores</a>
+                <a href="#">SIAFIC - DECRETO FEDERAL 10.540/20</a>
+                <a href="#">Termos e Contratos</a>
+                <a href="#">Unidades de Saúde</a>
+            </div>
+            <div class="footer-section">
+                <h3>OUTROS PORTAIS</h3>
+                <a href="#">Governo Federal</a>
+                <a href="#">Senado</a>
+                <a href="#">Câmara Federal</a>
+                <a href="#">Governo Estadual</a>
+                <a href="#">Leis Municipais</a>
+            </div>
+            <div class="footer-section">
+                <h3>FALE CONOSCO</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>21 2773-6213</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>ouvidoria@duquedecaxias.rj.gov.br</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Alameda Esmeralda 206<br>
+                        Jardim Primavera, Duque de Caxias/RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Praça Roberto da Silveira, 31 - 2º andar<br>
+                        Centro, Duque de Caxias/RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Segunda - Sexta, 9h - 17h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="institutional-footer">
+            <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
+            <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
+        </div>
+
+        <div class="development-credits">
+            <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterOptions() {
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll('.option-card');
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-search').toLowerCase();
+                if (searchData.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
