@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PMDC - Portal do Contribuinte</title>
+        <link rel="icon" type="image/png" href="logofavicon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://vilibras.gov.br/app/vilibras.js"></script>
+        <div id="vlibras">
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        </div>
+    </head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="tel:+552127732600" class="top-bar-item">
+                <i class="fas fa-phone"></i>
+                (21) 2773-6200
+            </a>
+            <a href="https://duquedecaxias.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-desktop"></i>
+                Portal da Prefeitura
+            </a>
+            <a href="https://saude.duquedecaxias.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-hospital"></i>
+                Portal da Saúde
+            </a>
+            <a href="https://www.cmdc.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-landmark"></i>
+                Câmara Municipal
+            </a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php" class="top-bar-item">
+                <i class="fas fa-headset"></i>
+                Ouvidoria
+            </a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/" class="top-bar-item">
+                <i class="fas fa-history"></i>
+                Versão anterior
+            </a>
+            <a href="#" class="top-bar-item">
+                <i class="fas fa-sitemap"></i>
+                Mapa do site
+            </a>
+            <a href="https://duquedecaxias.rj.gov.br/pagina/servicos/identidade-visual" class="top-bar-item">
+                <i class="fas fa-palette"></i>
+                Identidade Visual
+            </a>
+            <button onclick="toggleContrast()" class="top-bar-item contrast-button">
+                <i class="fas fa-adjust"></i>
+                Alto contraste
+            </button>
+        </div>
+    </div>
+
+    <nav class="main-menu">
+        <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
+        <div class="menu-links">
+            <a href="http://127.0.0.1:5500/sitee.html#">Home</a>
+            <a href="http://127.0.0.1:5500/siteatendimento.html">Atendimento</a>
+            <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Organograma</a>
+            <a href="https://duquedecaxias.rj.gov.br/portal/boletim-oficial.html">Boletim Oficial</a>
+            <a href="#">Conteúdos</a> <!-- FAZER PÁGINA DEDICADA-->
+            <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Secretarias</a>
+            <a href="#">Balanços</a> <!-- FAZER PÁGINA DEDICADA-->
+            <a href="https://duquedecaxias.rj.gov.br/noticias/1">Notícias</a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/perguntas-frequentes.php?conteudo=75">Perguntas Frequentes</a>
+            <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
+        </div>
+    </nav>
+
+    <div class="page-title">
+        <h1>HOME</h1>
+    </div>
+
+    <div class="search-container">
+        <form class="search-form" onsubmit="return false;">
+            <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar..." oninput="filterOptions()">
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+
+<!-- Grid de cards -->
+<div class="grid-container" id="optionsGrid">
+    <!-- Primeira linha -->
+    <div class="option-card" data-search="iptu imposto sobre imoveis" onclick="window.location.href='http://127.0.0.1:5500/siteiptu.html'">
+        <i class="fas fa-money-bill"></i>
+        <a href="http://127.0.0.1:5500/siteiptu.html" class="process-link">
+            <h2>IPTU</h2>
+        </a>
+    </div>
+    
+    <div class="option-card" data-search="itbi imposto sobre imoveis" onclick="window.location.href='http://127.0.0.1:5500/siteitbi.html'">
+        <i class="fas fa-dollar-sign"></i>
+        <a href="http://127.0.0.1:5500/siteitbi.html" class="process-link">
+            <h2>ITBI</h2>
+        </a>
+    </div>
+    
+    <div class="option-card" data-search="nfse nfs-e nota fiscal serviço servico" onclick="window.location.href='http://127.0.0.1:5500/sitenfse.html#'">
+        <i class="fas fa-building"></i>
+        <a href="http://127.0.0.1:5500/sitenfse.html" class="process-link">
+            <h2>NFS-E</h2>
+        </a>
+    </div>
+    
+    <!-- Segunda linha -->
+    <div class="option-card" data-search="ISS serviço servico sobre imposto" onclick="window.location.href='http://127.0.0.1:5500/siteiss.html'">
+        <i class="fas fa-file-contract"></i>
+        <a href="http://127.0.0.1:5500/siteiss.html" class="process-link">
+            <h2>ISS</h2>
+        </a>
+    </div>
+    
+    <div class="option-card" data-search="alvara alvará" onclick="window.location.href='http://127.0.0.1:5500/sitealvara.html'">
+        <i class="fas fa-chart-bar"></i>
+        <a href="http://127.0.0.1:5500/sitealvara.html" class="process-link">
+            <h2>Alvará</h2>
+        </a>
+    </div>
+    
+    <div class="option-card" data-search="consulta processos">
+        <i class="fas fa-file-alt"></i>
+        <a href="http://consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm" 
+           target="_blank" 
+           class="process-link">
+            <h2>Consulta de Processos</h2>
+        </a>
+    </div>
+    
+    <!-- Terceira linha -->
+    <div class="option-card" data-search="autarquias" onclick="window.location.href='http://127.0.0.1:5500/sitecertidoes.html'">
+        <i class="fas fa-clipboard-list"></i>
+        <a href="http://127.0.0.1:5500/sitecertidoes.html" class="process-link">
+            <h2>Certidões</h2>
+        </a>
+    </div>
+    
+    <div class="option-card" data-search="plantão fiscal" onclick="window.location.href='http://127.0.0.1:5500/siteplantaofiscal.html'">
+        <i class="fas fa-university"></i>
+        <a href="http://127.0.0.1:5500/siteplantaofiscal.html" class="process-link">
+            <h2>Plantão Fiscal</h2>
+        </a>
+    </div>
+    
+    <div class="option-card" data-search="plano plurianual">
+        <i class="fas fa-flag"></i>
+        <a href="#" class="process-link">
+            <h2>Plano Plurianual</h2>
+        </a>
+    </div>
+
+    <!-- Quarta linha -->
+    <div class="option-card" data-search="divida ativa">
+        <i class="fas fa-percentage"></i>
+        <a href="#" class="process-link">
+            <h2>Dívida Ativa</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="convenios governo federal">
+        <i class="fas fa-handshake"></i>
+        <a href="#" class="process-link">
+            <h2>Conv. Governo Federal</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="siafic">
+        <i class="fas fa-file-invoice"></i>
+        <a href="#" class="process-link">
+            <h2>SIAFIC - DECRETO FEDERAL 10.540/20</h2>
+        </a>
+    </div>
+
+    <!-- Quinta linha -->
+    <div class="option-card" data-search="relatorios lrf">
+        <i class="fas fa-chart-line"></i>
+        <a href="#" class="process-link">
+            <h2>Relatórios-LRF</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="recursos financeiros">
+        <i class="fas fa-money-check-alt"></i>
+        <a href="#" class="process-link">
+            <h2>Recursos Financeiros</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="remuneracao servidores">
+        <i class="fas fa-users"></i>
+        <a href="#" class="process-link">
+            <h2>Rem. dos Servidores</h2>
+        </a>
+    </div>
+
+    <!-- Sexta linha -->
+    <div class="option-card" data-search="gastos diarias">
+        <i class="fas fa-wallet"></i>
+        <a href="#" class="process-link">
+            <h2>Gastos com Diárias</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="pesquisa leis">
+        <i class="fas fa-search"></i>
+        <a href="#" class="process-link">
+            <h2>Pesquisas de Leis</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="escolas municipais">
+        <i class="fas fa-school"></i>
+        <a href="#" class="process-link">
+            <h2>Escolas Municipais</h2>
+        </a>
+    </div>
+
+    <!-- Sétima linha -->
+    <div class="option-card" data-search="ouvidoria">
+        <i class="fas fa-headset"></i>
+        <a href="#" class="process-link">
+            <h2>Ouvidoria</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="dados abertos">
+        <i class="fas fa-database"></i>
+        <a href="#" class="process-link">
+            <h2>Dados Abertos</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="ata registro preco">
+        <i class="fas fa-clipboard-list"></i>
+        <a href="#" class="process-link">
+            <h2>Ata Registro de Preço</h2>
+        </a>
+    </div>
+
+    <!-- Oitava linha -->
+    <div class="option-card" data-search="despesas cedae">
+        <i class="fas fa-faucet"></i>
+        <a href="#" class="process-link">
+            <h2>Despesas com recursos da CEDAE</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="ordem cronologica">
+        <i class="fas fa-clock"></i>
+        <a href="#" class="process-link">
+            <h2>Ordem Cronológica</h2>
+        </a>
+    </div>
+</div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONTEÚDOS</h3>
+                <a href="#">Ata Registro de Preço</a>
+                <a href="#">Autarquias</a>
+                <a href="#">Cadastro de Fornecedores</a>
+                <a href="#">Central de Regulação Saúde</a>
+                <a href="#">Conselho Municipal de Saúde</a>
+                <a href="#">Conv. Governo Federal</a>
+                <a href="#">COVID-19</a>
+                <a href="#">Dados Abertos</a>
+                <a href="#">Despesas</a>
+                <a href="#">Despesas com recursos da CEDAE</a>
+                <a href="#">Dívida Ativa</a>
+                <a href="#">Escolas Municipais</a>
+                <a href="#">Estatísticas de Acesso</a>
+                <a href="#">Fundos Municipais</a>
+                <a href="#">Gastos com Diárias</a>
+                <a href="#">Leis de Acesso a Informação</a>
+                <a href="#">LGPD</a>
+                <a href="#">Licitações</a>
+                <a href="#">Obras Públicas</a>
+                <a href="#">Orçamento</a>
+                <a href="#">Ouvidoria</a>
+                <a href="#">Patrimônios</a>
+                <a href="#">PDDE</a>
+                <a href="#">Pesquisas de Leis</a>
+                <a href="#">Plano Plurianual</a>
+                <a href="#">Prestação de Contas</a>
+                <a href="#">Radar da Transparência</a>
+                <a href="#">Receitas</a>
+                <a href="#">Recursos Financeiros</a>
+                <a href="#">Relatórios-LRF</a>
+                <a href="#">Rem. dos Servidores</a>
+                <a href="#">SIAFIC - DECRETO FEDERAL 10.540/20</a>
+                <a href="#">Termos e Contratos</a>
+                <a href="#">Unidades de Saúde</a>
+            </div>
+            <div class="footer-section">
+                <h3>OUTROS PORTAIS</h3>
+                <a href="#">Governo Federal</a>
+                <a href="#">Senado</a>
+                <a href="#">Câmara Federal</a>
+                <a href="#">Governo Estadual</a>
+                <a href="#">Leis Municipais</a>
+            </div>
+            <div class="footer-section">
+                <h3>FALE CONOSCO</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>21 2773-6213</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>ouvidoria@duquedecaxias.rj.gov.br</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Alameda Esmeralda 206<br>
+                        Jardim Primavera, Duque de Caxias/RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Praça Roberto da Silveira, 31 - 2º andar<br>
+                        Centro, Duque de Caxias/RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Segunda - Sexta, 9h - 17h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="institutional-footer">
+            <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
+            <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
+        </div>
+
+        <div class="development-credits">
+            <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia</p>
+        </div>
+    </footer>
+
+    <!-- Adicione esta linha antes do fechamento do body -->
+    <script src="pesquisa.js"></script>
+    <script src="scriptdealtocontraste.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-access-target"></div>
+        </div>
+    </div>
+
+    <script>
+        new window.VLibras.Widget();
+    </script>
+</body>
+</html>
+

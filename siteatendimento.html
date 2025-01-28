@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PMDC - Atendimento</title>
+        
+        <!-- Adicione isso antes dos outros CSS para garantir que a fonte carregue primeiro -->
+        <style>
+            @font-face {
+                font-family: 'AaltoSansEssentialLight';
+                src: url('AaltoSansEssential.ttf') format('truetype');
+                font-display: swap;
+            }
+        </style>
+        
+        <link rel="icon" type="image/png" href="logofavicon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            .grid-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;  /* Largura máxima mais adequada para leitura */
+            margin: 0 auto;
+            padding: 20px;
+            gap: 20px;
+        }
+            .endereco-card p {
+                margin: 8px 0;
+                color: #555;
+                line-height: 1.5;
+            }
+
+            .atendimento-header {
+                font-size: 20px;
+                font-family: 'AaltoSansEssentialLight', Arial, Helvetica, sans-serif;
+                font-weight: normal;
+            }
+
+            .horario p {
+                color: #555;
+                font-size: 1.1em;
+                line-height: 1.5;
+            }
+
+            .atendimento-local h3 {
+                margin-bottom: 8px;
+            }
+
+            .endereco-card {
+                margin-top: 5px;
+            }
+
+            @font-face {
+                font-family: 'AaltoSansEssentialLight';
+                src: url('/AaltoSansEssential.ttf') format('truetype'),
+                     url('/AaltoSansEssential.woff') format('woff');
+            }
+
+            .page-title {
+                margin-bottom: 20px;
+            }
+            .page-title h1 {
+            font-size: 38px;
+            font-family: 'AaltoSansEssentialLight', Arial, Helvetica, sans-serif !important;
+            font-weight: normal;
+        }
+        </style>
+        <style>
+            @media screen and (max-width: 768px) {
+                .grid-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                .atendimento-local {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .endereco-card {
+                    width: 90%;
+                    margin: 10px auto;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="tel:2127736200">(21) 2773-6200</a>
+            <a href="#">Portal da Prefeitura</a>
+            <a href="#">Portal da Saúde</a>
+            <a href="#">Câmara Municipal</a>
+            <a href="#">Ouvidoria</a>
+            <a href="#">Versão anterior</a>
+            <a href="#">Mapa do site</a>
+            <a href="#">Identidade Visual</a>
+            <a href="#">Alto contraste</a>
+        </div>
+    </div>
+
+    <nav class="main-menu">
+        <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
+        <a href="http://127.0.0.1:5500/sitee.html#">Home</a>
+        <a href="#">Atendimento</a>
+        <a href="#">Organograma</a>
+        <a href="#">Boletim Oficial</a>
+        <a href="#">Conteúdos</a>
+        <a href="#">Secretarias</a>
+        <a href="#">Balanços</a>
+        <a href="#">Notícias</a>
+        <a href="#">Perguntas Frequentes</a>
+        <a href="#">Fale conosco</a>
+    </nav>
+
+    <div class="page-title">
+        <h1>ATENDIMENTO</h1>
+    </div>
+
+<div class="grid-container">
+    <div class="atendimento-header">
+        <h2>Você pode entrar em contato com a Central de Atendimento ao Cidadão da
+        Prefeitura de Duque de Caxias das seguintes maneiras:</h2>
+    </div>
+
+    <div class="atendimento-local">
+        <h3><i class="fas fa-user"></i> Pessoalmente</h3>
+        
+        <div class="endereco-card">
+            <h4>SEDE da Prefeitura Municipal de Duque de Caxias</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Alameda Esmeralda, 206, Jd. Primavera</p>
+            <p>25215-260 - Duque de Caxias - RJ</p>
+            <p><i class="fas fa-phone"></i> Telefone: 21 2773-6200</p>
+        </div>
+
+        <div class="endereco-card">
+            <h4>Unidade Centro</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Praça Roberto da Silveira, 31 - 2º andar - Centro</p>
+            <p>Duque de Caxias / RJ</p>
+            <p>CEP.: 25070-005</p>
+            <p><i class="fas fa-phone"></i> Telefone: 21 2672-8800</p>
+        </div>
+
+        <div class="horario">
+            <h3><i class="fas fa-clock"></i> Horário de atendimento</h3>
+            <p>Segunda - Sexta, das 9h - 17h</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONTEÚDOS</h3>
+                <a href="#">Ata Registro de Preço</a>
+                <a href="#">Autarquias</a>
+                <a href="#">Cadastro de Fornecedores</a>
+                <a href="#">Central de Regulação Saúde</a>
+                <a href="#">Conselho Municipal de Saúde</a>
+                <a href="#">Conv. Governo Federal</a>
+                <a href="#">COVID-19</a>
+                <a href="#">Dados Abertos</a>
+                <a href="#">Despesas</a>
+                <a href="#">Despesas com recursos da CEDAE</a>
+                <a href="#">Dívida Ativa</a>
+                <a href="#">Escolas Municipais</a>
+                <a href="#">Estatísticas de Acesso</a>
+                <a href="#">Fundos Municipais</a>
+                <a href="#">Gastos com Diárias</a>
+                <a href="#">Leis de Acesso a Informação</a>
+                <a href="#">LGPD</a>
+                <a href="#">Licitações</a>
+                <a href="#">Obras Públicas</a>
+                <a href="#">Orçamento</a>
+                <a href="#">Ouvidoria</a>
+                <a href="#">Patrimônios</a>
+                <a href="#">PDDE</a>
+                <a href="#">Pesquisas de Leis</a>
+                <a href="#">Plano Plurianual</a>
+                <a href="#">Prestação de Contas</a>
+                <a href="#">Radar da Transparência</a>
+                <a href="#">Receitas</a>
+                <a href="#">Recursos Financeiros</a>
+                <a href="#">Relatórios-LRF</a>
+                <a href="#">Rem. dos Servidores</a>
+                <a href="#">SIAFIC - DECRETO FEDERAL 10.540/20</a>
+                <a href="#">Termos e Contratos</a>
+                <a href="#">Unidades de Saúde</a>
+            </div>
+            <div class="footer-section">
+                <h3>OUTROS PORTAIS</h3>
+                <a href="#">Governo Federal</a>
+                <a href="#">Senado</a>
+                <a href="#">Câmara Federal</a>
+                <a href="#">Governo Estadual</a>
+                <a href="#">Leis Municipais</a>
+            </div>
+            <div class="footer-section">
+                <h3>FALE CONOSCO</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>21 2773-6213</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>ouvidoria@duquedecaxias.rj.gov.br</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Alameda Esmeralda 206<br>
+                        Jardim Primavera, Duque de Caxias/RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Praça Roberto da Silveira, 31 - 2º andar<br>
+                        Centro, Duque de Caxias/RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Segunda - Sexta, 9h - 17h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="institutional-footer">
+            <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
+            <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
+        </div>
+
+        <div class="development-credits">
+            <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia</p>
+        </div>
+    </footer>
+</body>
+</html>
