@@ -57,13 +57,13 @@
     <nav class="main-menu">
         <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
         <div class="menu-links">
-            <a href="http://127.0.0.1:5500/sitee.html#">Home</a>
+            <a href="http://127.0.0.1:5500/sitee.html">Home</a>
             <a href="http://127.0.0.1:5500/siteatendimento.html">Atendimento</a>
             <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Organograma</a>
             <a href="https://duquedecaxias.rj.gov.br/portal/boletim-oficial.html">Boletim Oficial</a>
-            <a href="http://127.0.0.1:5500/siteconteudo.html">Conteúdos</a> <!-- FAZER PÁGINA DEDICADA-->
+            <a href="http://127.0.0.1:5500/siteconteudo.html">Conteúdos</a>
             <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Secretarias</a>
-            <a href="#">Balanços</a> <!-- FAZER PÁGINA DEDICADA-->
+            <a href="#">Balanços</a>
             <a href="https://duquedecaxias.rj.gov.br/noticias/1">Notícias</a>
             <a href="https://transparencia.duquedecaxias.rj.gov.br/perguntas-frequentes.php?conteudo=75">Perguntas Frequentes</a>
             <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
@@ -86,91 +86,91 @@
 <!-- Grid de cards -->
 <div class="grid-container" id="optionsGrid">
     <!-- Primeira linha -->
-    <div class="option-card" data-search="iptu imposto sobre imoveis" onclick="window.location.href='http://127.0.0.1:5500/siteiptu.html'">
+    <div class="option-card" data-search="ISS serviço servico sobre imposto" onclick="window.open('http://127.0.0.1:5500/siteiss.html', '_blank')">
+        <i class="fas fa-file-contract"></i>
+        <a href="http://127.0.0.1:5500/siteiss.html" class="process-link" target="_blank">
+            <h2>ISS</h2>
+        </a>
+    </div>
+
+    <div class="option-card" data-search="iptu imposto sobre imoveis" onclick="window.open('http://127.0.0.1:5500/siteiptu.html', '_blank')">
         <i class="fas fa-money-bill"></i>
-        <a href="http://127.0.0.1:5500/siteiptu.html" class="process-link">
             <h2>IPTU</h2>
         </a>
     </div>
     
-    <div class="option-card" data-search="itbi imposto sobre imoveis" onclick="window.location.href='http://127.0.0.1:5500/siteitbi.html'">
+    <div class="option-card" data-search="itbi imposto sobre imoveis" onclick="window.open('http://127.0.0.1:5500/siteitbi.html', '_blank')">
         <i class="fas fa-dollar-sign"></i>
-        <a href="http://127.0.0.1:5500/siteitbi.html" class="process-link">
             <h2>ITBI</h2>
         </a>
     </div>
     
-    <div class="option-card" data-search="nfse nfs-e nota fiscal serviço servico" onclick="window.location.href='http://127.0.0.1:5500/sitenfse.html#'">
+    <div class="option-card" data-search="nfse nfs-e nota fiscal serviço servico" onclick="window.open('http://127.0.0.1:5500/sitenfse.html', '_blank')">
         <i class="fas fa-building"></i>
-        <a href="http://127.0.0.1:5500/sitenfse.html" class="process-link">
             <h2>NFS-E</h2>
         </a>
     </div>
     
     <!-- Segunda linha -->
-    <div class="option-card" data-search="ISS serviço servico sobre imposto" onclick="window.location.href='http://127.0.0.1:5500/siteiss.html'">
-        <i class="fas fa-file-contract"></i>
-        <a href="http://127.0.0.1:5500/siteiss.html" class="process-link">
-            <h2>ISS</h2>
-        </a>
-    </div>
     
-    <div class="option-card" data-search="alvara alvará" onclick="window.location.href='http://127.0.0.1:5500/sitealvara.html'">
+    <div class="option-card" data-search="alvara alvará" onclick="window.open('http://127.0.0.1:5500/sitealvara.html', '_blank')">
         <i class="fas fa-chart-bar"></i>
-        <a href="http://127.0.0.1:5500/sitealvara.html" class="process-link">
+
             <h2>Alvará</h2>
         </a>
     </div>
     
-    <div class="option-card" data-search="consulta processos" onclick="window.location.href='http://consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm'">
+    <div class="option-card" data-search="consulta processos" onclick="window.open('http://consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm', '_blank')">
         <i class="fas fa-file-alt"></i>
-        <a href="http://consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm" 
-           target="_blank" 
-           class="process-link">
             <h2>Consulta de Processos</h2>
         </a>
     </div>
     
     <!-- Terceira linha -->
-    <div class="option-card" data-search="autarquias" onclick="window.location.href='http://127.0.0.1:5500/sitecertidoes.html'">
+    <div class="option-card" data-search="autarquias" onclick="window.open('http://127.0.0.1:5500/sitecertidoes.html', '_blank')">
         <i class="fas fa-clipboard-list"></i>
-        <a href="http://127.0.0.1:5500/sitecertidoes.html" class="process-link">
             <h2>Certidões</h2>
         </a>
     </div>
     
-    <div class="option-card" data-search="plantão fiscal" onclick="window.location.href='http://127.0.0.1:5500/siteplantaofiscal.html'">
+    <div class="option-card" data-search="plantão fiscal" onclick="window.open('http://127.0.0.1:5500/siteplantaofiscal.html', '_blank')">
         <i class="fas fa-university"></i>
-        <a href="http://127.0.0.1:5500/siteplantaofiscal.html" class="process-link">
             <h2>Plantão Fiscal</h2>
         </a>
     </div>
+
+    <div class="option-card" data-search="legislacao" onclick="window.open('http://127.0.0.1:5500/sitelegislacao.html', '_blank')">
+        <i class="fas fa-hammer"></i>
+        <a href="https://transparencia.duquedecaxias.rj.gov.br/plano-plurianual.php" class="process-link" target="_blank">
+            <h2>Legislação</h2>
+        </a>
+    </div>
     
-    <div class="option-card" data-search="plano plurianual" onclick="window.location.href='https://transparencia.duquedecaxias.rj.gov.br/plano-plurianual.php'">
+    <div class="option-card" data-search="plano plurianual" onclick="window.open('https://transparencia.duquedecaxias.rj.gov.br/plano-plurianual.php', '_blank')">
         <i class="fas fa-flag"></i>
-        <a href="https://transparencia.duquedecaxias.rj.gov.br/plano-plurianual.php" class="process-link">
+        <a href="https://transparencia.duquedecaxias.rj.gov.br/plano-plurianual.php" class="process-link" target="_blank">
             <h2>Plano Plurianual</h2>
         </a>
     </div>
 
     <!-- Quarta linha -->
-    <div class="option-card" data-search="divida ativa" onclick="window.location.href='https://transparencia.duquedecaxias.rj.gov.br/divida-ativa.php'">
+    <div class="option-card" data-search="divida ativa" onclick="window.open('https://transparencia.duquedecaxias.rj.gov.br/divida-ativa.php', '_blank')">
         <i class="fas fa-percentage"></i>
-        <a href="https://transparencia.duquedecaxias.rj.gov.br/divida-ativa.php" class="process-link">
+        <a href="https://transparencia.duquedecaxias.rj.gov.br/divida-ativa.php" class="process-link" target="_blank">
             <h2>Dívida Ativa</h2>
         </a>
     </div>
 
-    <div class="option-card" data-search="convenios governo federal" onclick="window.location.href='https://portaldatransparencia.gov.br/localidades/3301702-duque-de-caxias'">
+    <div class="option-card" data-search="convenios governo federal" onclick="window.open('https://portaldatransparencia.gov.br/localidades/3301702-duque-de-caxias', '_blank')">
         <i class="fas fa-handshake"></i>
-        <a href="https://portaldatransparencia.gov.br/localidades/3301702-duque-de-caxias" class="process-link">
+        <a href="https://portaldatransparencia.gov.br/localidades/3301702-duque-de-caxias" class="process-link" target="_blank">
             <h2>Conv. Governo Federal</h2>
         </a>
     </div>
 
-    <div class="option-card" data-search="siafic" onclick="window.location.href='https://transparencia.duquedecaxias.rj.gov.br/siafic.php'" >
+    <div class="option-card" data-search="siafic" onclick="window.open('https://transparencia.duquedecaxias.rj.gov.br/siafic.php', '_blank')" >
         <i class="fas fa-file-invoice"></i>
-        <a href="https://transparencia.duquedecaxias.rj.gov.br/siafic.php" class="process-link">
+        <a href="https://transparencia.duquedecaxias.rj.gov.br/siafic.php" class="process-link" target="_blank">
             <h2>SIAFIC - DECRETO FEDERAL 10.540/20</h2>
         </a>
     </div>
@@ -178,20 +178,20 @@
     <div class="option-card" data-search="relatorios lrf">
         <i class="fas fa-chart-line"></i>
         <a href="#" class="process-link">
-            <h2>Relatórios-LRF</h2>    <!-- FAZER UMA PÁGINA IGUAL À ESSA https://transparencia.duquedecaxias.rj.gov.br/relatorios-lrf.php-->
+            <h2>Relatórios-LRF</h2>
         </a>
     </div>
 
     <div class="option-card" data-search="recursos financeiros">
         <i class="fas fa-money-check-alt"></i>
         <a href="#" class="process-link">
-            <h2>Recursos Financeiros</h2> <!-- FAZER UMA IGUAL A ESSA TBM https://transparencia.duquedecaxias.rj.gov.br/recursos-financeiros.php-->
+            <h2>Recursos Financeiros</h2>
         </a>
     </div>
 
-    <div class="option-card" data-search="remuneracao servidores" onclick="window.location.href='https://fpg.duquedecaxias.rj.gov.br/fpg5/openform.do?sys=FPG&action=openform&formID=8808'">
+    <div class="option-card" data-search="remuneracao servidores" onclick="window.open('https://fpg.duquedecaxias.rj.gov.br/fpg5/openform.do?sys=FPG&action=openform&formID=8808', '_blank')">
         <i class="fas fa-users"></i>
-        <a href="https://fpg.duquedecaxias.rj.gov.br/fpg5/openform.do?sys=FPG&action=openform&formID=8808" class="process-link">
+        <a href="https://fpg.duquedecaxias.rj.gov.br/fpg5/openform.do?sys=FPG&action=openform&formID=8808" class="process-link" target="_blank">
             <h2>Rem. dos Servidores</h2>
         </a>
     </div>
@@ -199,16 +199,16 @@
     <div class="option-card" data-search="gastos diarias">
         <i class="fas fa-wallet"></i>
         <a href="#" class="process-link">
-            <h2>Gastos com Diárias</h2>  <!-- FAZER UMA PÁGINA COM UM BOTÃO QUE LEVE PARA ESSE LINK http://pmdc.modernizacao.com.br:8151/ctp5/form.jsp?sys=CTP&action=openform&formID=464569833&align=0&mode=-1&goto=-1&filter=&scrolling=no-->
+            <h2>Gastos com Diárias</h2>
         </a>
     </div>
 
-    <div class="option-card" data-search="pesquisa leis" onclick="window.location.href='https://leismunicipais.com.br/prefeitura/rj/duquedecaxias'">
+    <div class="option-card" data-search="pesquisa leis" onclick="window.open('https://leismunicipais.com.br/prefeitura/rj/duquedecaxias', '_blank')">
         <i class="fas fa-search"></i>
-        <a href="https://leismunicipais.com.br/prefeitura/rj/duquedecaxias" class="process-link">
+        <a href="https://leismunicipais.com.br/prefeitura/rj/duquedecaxias" class="process-link" target="_blank">
             <h2>Pesquisas de Leis</h2>
         </a>
-    </div> <!-- ---->
+    </div>
 
     <div class="option-card" data-search="escolas municipais">
         <i class="fas fa-school"></i>
@@ -220,27 +220,27 @@
     <div class="option-card" data-search="ouvidoria">
         <i class="fas fa-headset"></i>
         <a href="#" class="process-link">
-            <h2>Ouvidoria</h2> <!-- FAZER PAGINAS COM ESSES 4 BOTÕES DE REDIRECIONAENTO https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php-->
+            <h2>Ouvidoria</h2>
         </a>
     </div>
 
     <div class="option-card" data-search="dados abertos">
         <i class="fas fa-database"></i>
         <a href="#" class="process-link">
-            <h2>Dados Abertos</h2> <!-- CÓPIAR A PÁGINA E FAZER OS REDIRECIONAMENTOS IGUAIS À https://transparencia.duquedecaxias.rj.gov.br/dados_abertos.php-->
+            <h2>Dados Abertos</h2>
         </a>
     </div>
 
     <div class="option-card" data-search="ata registro preco">
         <i class="fas fa-clipboard-list"></i>
         <a href="#" class="process-link">
-            <h2>Ata Registro de Preço</h2> <!-- Abre uma página nova e só copia todos os dados https://transparencia.duquedecaxias.rj.gov.br/ata-registro-preco.php-->
+            <h2>Ata Registro de Preço</h2>
         </a>
     </div>
 
-    <div class="option-card" data-search="despesas cedae" onclick="window.location.href='https://transparencia.duquedecaxias.rj.gov.br/arquivos/cedae/Despesas_com_recursos_da_cedae_2024.pdf'">
+    <div class="option-card" data-search="despesas cedae" onclick="window.open('https://transparencia.duquedecaxias.rj.gov.br/arquivos/cedae/Despesas_com_recursos_da_cedae_2024.pdf', '_blank')">
         <i class="fas fa-faucet"></i>
-        <a href="https://transparencia.duquedecaxias.rj.gov.br/arquivos/cedae/Despesas_com_recursos_da_cedae_2024.pdf" class="process-link">
+        <a href="https://transparencia.duquedecaxias.rj.gov.br/arquivos/cedae/Despesas_com_recursos_da_cedae_2024.pdf" class="process-link" target="_blank">
             <h2>Despesas com recursos da CEDAE</h2>
         </a>
     </div>
@@ -256,7 +256,7 @@
     <!-- Rodapé -->
     <footer>
         <div class="footer-content">
-            <div class="footer-section">    <!-- Colocar links em todos os rodapés (fácil, só copiar do transparencia)-->
+            <div class="footer-section">
                 <h3>CONTEÚDOS</h3>
                 <a href="#">Ata Registro de Preço</a>
                 <a href="#">Autarquias</a>
@@ -344,7 +344,6 @@
         </div>
     </footer>
 
- <!-- Javascript da barra de pesquisa lá e do botão de alto contraste pra deixar as parada preta e branca-->
     <script src="pesquisa.js"></script>
     <script src="scriptdealtocontraste.js"></script>
 

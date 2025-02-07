@@ -24,7 +24,7 @@
             max-width: 800px;  /* Largura máxima mais adequada para leitura */
             margin: 0 auto;
             padding: 20px;
-            gap: 20px;
+            gap: 30px;
         }
             .endereco-card p {
                 margin: 8px 0;
@@ -70,21 +70,11 @@
         <style>
             @media screen and (max-width: 768px) {
                 .grid-container {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
+                    padding: 15px;
                 }
 
-                .atendimento-local {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-                .endereco-card {
-                    width: 90%;
-                    margin: 10px auto;
+                .endereco-card, .horario-card {
+                    padding: 15px;
                 }
             }
         </style>
@@ -92,23 +82,51 @@
 <body>
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="tel:2127736200">(21) 2773-6200</a>
-            <a href="#">Portal da Prefeitura</a>
-            <a href="#">Portal da Saúde</a>
-            <a href="#">Câmara Municipal</a>
-            <a href="#">Ouvidoria</a>
-            <a href="#">Versão anterior</a>
-            <a href="#">Mapa do site</a>
-            <a href="#">Identidade Visual</a>
-            <a href="#">Alto contraste</a>
+            <a href="tel:+552127732600" class="top-bar-item">
+                <i class="fas fa-phone"></i>
+                (21) 2773-6200
+            </a>
+            <a href="https://duquedecaxias.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-desktop"></i>
+                Portal da Prefeitura
+            </a>
+            <a href="https://saude.duquedecaxias.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-hospital"></i>
+                Portal da Saúde
+            </a>
+            <a href="https://www.cmdc.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-landmark"></i>
+                Câmara Municipal
+            </a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php" class="top-bar-item">
+                <i class="fas fa-headset"></i>
+                Ouvidoria
+            </a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/" class="top-bar-item">
+                <i class="fas fa-history"></i>
+                Versão anterior
+            </a>
+            <a href="#" class="top-bar-item">
+                <i class="fas fa-sitemap"></i>
+                Mapa do site
+            </a>
+            <a href="https://duquedecaxias.rj.gov.br/pagina/servicos/identidade-visual" class="top-bar-item">
+                <i class="fas fa-palette"></i>
+                Identidade Visual
+            </a>
+            <button onclick="toggleContrast()" class="top-bar-item contrast-button">
+                <i class="fas fa-adjust"></i>
+                Alto contraste
+            </button>
         </div>
     </div>
 
     <nav class="main-menu">
         <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
         <div class="menu-links">
-            <a href="http://127.0.0.1:5500/sitee.html#">Home</a>
+            <a href="http://127.0.0.1:5500/sitee.html">Home</a>
             <a href="http://127.0.0.1:5500/siteatendimento.html">Atendimento</a>
+
             <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Organograma</a>
             <a href="https://duquedecaxias.rj.gov.br/portal/boletim-oficial.html">Boletim Oficial</a>
             <a href="http://127.0.0.1:5500/siteconteudo.html">Conteúdos</a> <!-- FAZER PÁGINA DEDICADA-->
@@ -126,32 +144,31 @@
 
 <div class="grid-container">
     <div class="atendimento-header">
-        <h2>Você pode entrar em contato com a Central de Atendimento ao Cidadão da
-        Prefeitura de Duque de Caxias das seguintes maneiras:</h2>
+        <h1>Central de Atendimento ao Cidadão</h1>
+        <p>Confira abaixo os canais de atendimento disponíveis:</p>
     </div>
 
-    <div class="atendimento-local">
-        <h3><i class="fas fa-user"></i> Pessoalmente</h3>
-        
-        <div class="endereco-card">
-            <h4>SEDE da Prefeitura Municipal de Duque de Caxias</h4>
+    <div class="endereco-card">
+        <h3><i class="fas fa-building"></i> Sede da Prefeitura Municipal de Duque de Caxias</h3>
+        <div class="info-group">
             <p><i class="fas fa-map-marker-alt"></i> Alameda Esmeralda, 206, Jd. Primavera</p>
-            <p>25215-260 - Duque de Caxias - RJ</p>
-            <p><i class="fas fa-phone"></i> Telefone: 21 2773-6200</p>
+            <p><i class="fas fa-map-pin"></i> 25215-260 - Duque de Caxias - RJ</p>
+            <p><i class="fas fa-phone"></i> (21) 2773-6200</p>
         </div>
+    </div>
 
-        <div class="endereco-card">
-            <h4>Unidade Centro</h4>
+    <div class="endereco-card">
+        <h3><i class="fas fa-building"></i> Unidade Centro</h3>
+        <div class="info-group">
             <p><i class="fas fa-map-marker-alt"></i> Praça Roberto da Silveira, 31 - 2º andar - Centro</p>
-            <p>Duque de Caxias / RJ</p>
-            <p>CEP.: 25070-005</p>
-            <p><i class="fas fa-phone"></i> Telefone: 21 2672-8800</p>
+            <p><i class="fas fa-map-pin"></i> CEP: 25070-005 - Duque de Caxias/RJ</p>
+            <p><i class="fas fa-phone"></i> (21) 2672-8800</p>
         </div>
+    </div>
 
-        <div class="horario">
-            <h3><i class="fas fa-clock"></i> Horário de atendimento</h3>
-            <p>Segunda - Sexta, das 9h - 17h</p>
-        </div>
+    <div class="horario-card">
+        <h3><i class="fas fa-clock"></i> Horário de Atendimento</h3>
+        <p style="color: #555555;">Segunda à Sexta, das 9h às 17h</p>
     </div>
 </div>
 

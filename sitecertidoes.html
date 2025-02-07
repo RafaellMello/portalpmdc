@@ -43,6 +43,29 @@
                 position: relative;
                 z-index: 2;
             }
+
+            .page-title {
+                background-color: #00AFEF;
+                color: white;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .page-title h1 {
+                font-size: 45px;
+                font-family: 'AaltoSansEssentialLight', Arial, Helvetica, sans-serif !important;
+                font-weight: normal;
+                margin-bottom: 15px;
+                padding-top: 0px;
+            }
+
+            .description {
+                max-width: 1330px;
+                margin: 0 auto;
+                line-height: 1.5;
+                font-size: 16px;
+                padding-bottom: 0px;
+            }
         </style>
         
         <link rel="icon" type="image/png" href="logofavicon.png">
@@ -52,23 +75,51 @@
 <body>
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="tel:2127736200">(21) 2773-6200</a>
-            <a href="#">Portal da Prefeitura</a>
-            <a href="#">Portal da Saúde</a>
-            <a href="#">Câmara Municipal</a>
-            <a href="#">Ouvidoria</a>
-            <a href="#">Versão anterior</a>
-            <a href="#">Mapa do site</a>
-            <a href="#">Identidade Visual</a>
-            <a href="#">Alto contraste</a>
+            <a href="tel:+552127732600" class="top-bar-item">
+                <i class="fas fa-phone"></i>
+                (21) 2773-6200
+            </a>
+            <a href="https://duquedecaxias.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-desktop"></i>
+                Portal da Prefeitura
+            </a>
+            <a href="https://saude.duquedecaxias.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-hospital"></i>
+                Portal da Saúde
+            </a>
+            <a href="https://www.cmdc.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-landmark"></i>
+                Câmara Municipal
+            </a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php" class="top-bar-item">
+                <i class="fas fa-headset"></i>
+                Ouvidoria
+            </a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/" class="top-bar-item">
+                <i class="fas fa-history"></i>
+                Versão anterior
+            </a>
+            <a href="#" class="top-bar-item">
+                <i class="fas fa-sitemap"></i>
+                Mapa do site
+            </a>
+            <a href="https://duquedecaxias.rj.gov.br/pagina/servicos/identidade-visual" class="top-bar-item">
+                <i class="fas fa-palette"></i>
+                Identidade Visual
+            </a>
+            <button onclick="toggleContrast()" class="top-bar-item contrast-button">
+                <i class="fas fa-adjust"></i>
+                Alto contraste
+            </button>
         </div>
     </div>
 
     <nav class="main-menu">
         <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
         <div class="menu-links">
-            <a href="http://127.0.0.1:5500/sitee.html#">Home</a>
+            <a href="http://127.0.0.1:5500/sitee.html">Home</a>
             <a href="http://127.0.0.1:5500/siteatendimento.html">Atendimento</a>
+
             <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Organograma</a>
             <a href="https://duquedecaxias.rj.gov.br/portal/boletim-oficial.html">Boletim Oficial</a>
             <a href="http://127.0.0.1:5500/siteconteudo.html">Conteúdos</a> <!-- FAZER PÁGINA DEDICADA-->
@@ -82,7 +133,6 @@
 
     <div class="page-title">
         <h1>Certidões</h1>
-        <br></br>
         <p class="description">A PMDC disponibiliza, de forma prática e rápida, a emissão de Certidões de Débito e Certidões Cadastrais para cidadãos e empresas. Nosso objetivo é garantir transparência e facilitar o acesso às informações fiscais e cadastrais, promovendo um atendimento ágil e eficiente. Acesse os serviços online e resolva suas pendências de forma segura, sem precisar sair de casa.</p>
     </div>
 

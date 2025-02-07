@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PMDC - Alvará</title>
+        <title>PMDC - Legislação</title>
         
         <style>
             @font-face {
@@ -43,6 +43,13 @@
                 position: relative;
                 z-index: 2;
             }
+
+            .description {
+                font-family: 'AaltoSansEssentialLight', Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                text-align: center;
+            }
         </style>
         
         <link rel="icon" type="image/png" href="logofavicon.png">
@@ -51,45 +58,48 @@
     </head>
 <body>
     <div class="top-bar">
-        <div class="top-bar-content">
-            <a href="tel:+552127732600" class="top-bar-item">
-                <i class="fas fa-phone"></i>
-                (21) 2773-6200
-            </a>
-            <a href="https://duquedecaxias.rj.gov.br/" class="top-bar-item">
-                <i class="fas fa-desktop"></i>
-                Portal da Prefeitura
-            </a>
-            <a href="https://saude.duquedecaxias.rj.gov.br/" class="top-bar-item">
-                <i class="fas fa-hospital"></i>
-                Portal da Saúde
-            </a>
-            <a href="https://www.cmdc.rj.gov.br/" class="top-bar-item">
-                <i class="fas fa-landmark"></i>
-                Câmara Municipal
-            </a>
-            <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php" class="top-bar-item">
-                <i class="fas fa-headset"></i>
-                Ouvidoria
-            </a>
-            <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/" class="top-bar-item">
-                <i class="fas fa-history"></i>
-                Versão anterior
-            </a>
-            <a href="#" class="top-bar-item">
-                <i class="fas fa-sitemap"></i>
-                Mapa do site
-            </a>
-            <a href="https://duquedecaxias.rj.gov.br/pagina/servicos/identidade-visual" class="top-bar-item">
-                <i class="fas fa-palette"></i>
-                Identidade Visual
-            </a>
-            <button onclick="toggleContrast()" class="top-bar-item contrast-button">
-                <i class="fas fa-adjust"></i>
-                Alto contraste
-            </button>
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <a href="tel:+552127732600" class="top-bar-item">
+                    <i class="fas fa-phone"></i>
+                    (21) 2773-6200
+                </a>
+                <a href="https://duquedecaxias.rj.gov.br/" class="top-bar-item">
+                    <i class="fas fa-desktop"></i>
+                    Portal da Prefeitura
+                </a>
+                <a href="https://saude.duquedecaxias.rj.gov.br/" class="top-bar-item">
+                    <i class="fas fa-hospital"></i>
+                    Portal da Saúde
+                </a>
+                <a href="https://www.cmdc.rj.gov.br/" class="top-bar-item">
+                    <i class="fas fa-landmark"></i>
+                    Câmara Municipal
+                </a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php" class="top-bar-item">
+                    <i class="fas fa-headset"></i>
+                    Ouvidoria
+                </a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/" class="top-bar-item">
+                    <i class="fas fa-history"></i>
+                    Versão anterior
+                </a>
+                <a href="#" class="top-bar-item">
+                    <i class="fas fa-sitemap"></i>
+                    Mapa do site
+                </a>
+                <a href="https://duquedecaxias.rj.gov.br/pagina/servicos/identidade-visual" class="top-bar-item">
+                    <i class="fas fa-palette"></i>
+                    Identidade Visual
+                </a>
+                <button onclick="toggleContrast()" class="top-bar-item contrast-button">
+                    <i class="fas fa-adjust"></i>
+                    Alto contraste
+                </button>
+            </div>
         </div>
-    </div> <!-- -->
+    </div>
+
 
     <nav class="main-menu">
         <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
@@ -99,10 +109,9 @@
 
             <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Organograma</a>
             <a href="https://duquedecaxias.rj.gov.br/portal/boletim-oficial.html">Boletim Oficial</a>
-            <a href="http://127.0.0.1:5500/siteconteudo.html">Conteúdos</a> <!-- FAZER PÁGINA DEDICADA-->
-
+            <a href="http://127.0.0.1:5500/siteconteudo.html">Conteúdos</a>
             <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Secretarias</a>
-            <a href="#">Balanços</a> <!-- FAZER PÁGINA DEDICADA-->
+            <a href="#">Balanços</a>
             <a href="https://duquedecaxias.rj.gov.br/noticias/1">Notícias</a>
             <a href="https://transparencia.duquedecaxias.rj.gov.br/perguntas-frequentes.php?conteudo=75">Perguntas Frequentes</a>
             <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
@@ -110,9 +119,12 @@
     </nav>
 
     <div class="page-title">
-        <h1>Alvará</h1>
+        <h1>Legislação</h1>
         <br></br>
-        <p class="description">O Alvará de funcionamento é o documento municipal que autoriza a empresa a iniciar as suas atividades econômicas de acordo com a viabilidade do local e de acordo com a atividade. Empresas, inclusive MEI, e autônomos para prestarem serviços no município precisam do alvará de funcionamento. A Secretaria da Fazenda de Duque de Caxias emite o registro 100% on-line, integrado ao sistema REGIN.</p>
+        <p class="description">
+            A página reúne informações sobre o Código Tributário Municipal, regulamentações da NFE e DANFSE, 
+            <br>orientando sobre obrigações fiscais e facilitando o entendimento das legislações tributárias aplicáveis no município. 
+        </p>
     </div>
 
     <div class="search-container">
@@ -123,41 +135,28 @@
             </button>
         </form>
     </div>
-    
+
     <div class="grid-container" id="optionsGrid">
-        <div class="option-card" data-search="procedimento manual passo a passo como solicitar alvara">
-            <a href="https://duquedecaxias.rj.gov.br/arquivos/procedimentos_alvara.pdf" class="process-link" target="_blank">
-                <i class="fas fa-file-pdf"></i>
-                <h2>Manual do Alvará</h2>
+        <div class="option-card" data-search="legislacao normativas leis">
+
+            <a href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2010/233/2332/lei-ordinaria-n-2332-2010-institui-a-nota-fiscal-de-servicos-eletronica-nfs-e-e-da-outras-providencias" class="process-link" target="_blank">
+                <i class="fas fa-gavel"></i>
+                <h2>Legislação da NFS-E </h2>
             </a>
         </div>
 
-        <div class="option-card" data-search="validar segunda via consultar alvara">
-            <a href="https://www.tributosnet.com.br/duquedecaxias/portal/Modulos/ValidaAlvara.aspx?m=503" class="process-link" target="_blank">
-                <i class="fas fa-search"></i>
-                <h2>Validar/Segunda via do Alvará</h2>
+        <div class="option-card" data-search="dte legislaçao">
+            <a href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2018/291/2918/lei-ordinaria-n-2918-2018-institui-o-domicilio-tributario-eletronico-dt-e-e-altera-dispositivos-da-lei-municipal-n-1664-de-28-de-novembro-de-2002-codigo-tributario-municipal" class="process-link" target="_blank">
+                <i class="fas fa-gavel"></i>
+                <h2>Legislação do DT-E</h2>
             </a>
         </div>
-
-        <div class="option-card" data-search="ctm codigo tributario municipal legislacao">
+        <div class="option-card" data-search="ctm tributo">
             <a href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2002/166/1664/lei-ordinaria-n-1664-2002-institui-o-novo-codigo-tributario-do-municipio" class="process-link" target="_blank">
-                <i class="fas fa-book"></i>
+                <i class="fas fa-search-dollar"></i>
                 <h2>Código Tributário Municipal</h2>
             </a>
         </div>
-
-        <div class="option-card" data-search="nfse nota fiscal servico legislacao">
-            <a href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2010/233/2332/lei-ordinaria-n-2332-2010-institui-a-nota-fiscal-de-servicos-eletronica-nfs-e-e-da-outras-providencias" class="process-link" target="_blank">
-                <i class="fas fa-gavel"></i>
-                <h2>Legislação da NFS-e</h2>
-            </a>
-        </div>
-
-        <div class="option-card" data-search="dte domicilio tributario eletronico legislacao">
-            <a href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2018/291/2918/lei-ordinaria-n-2918-2018-institui-o-domicilio-tributario-eletronico-dt-e-e-altera-dispositivos-da-lei-municipal-n-1664-de-28-de-novembro-de-2002-codigo-tributario-municipal" class="process-link" target="_blank">
-                <i class="fas fa-gavel"></i>
-                <h2>Legislação do DT-e</h2>
-            </a>
         </div>
     </div>
 
