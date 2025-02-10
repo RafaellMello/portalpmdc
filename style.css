@@ -680,3 +680,20 @@
                 margin-left: 0;
             }
         }
+
+        /* Ajuste específico para a página NFS-E */
+        .sitenfse .side-menu {
+            top: 142px;  /* Ajustado para alinhar com o topo da área azul clara */
+            height: calc(100vh - 180px);  /* Altura ajustada especificamente para sitenfse.html */
+        }
+
+        /* Ajuste específico para a página Plantão Fiscal */
+        .siteplantaofiscal .side-menu {
+            top: 142px;
+            height: calc(100vh - 180px);  /* Mesma altura da página NFS-E */
+        }
+        .sitelegislacao .side-menu {
+            top: 142px;
+            height: calc(100vh - 180px);  /* Mesma altura da página NFS-E */
+        }
+        
