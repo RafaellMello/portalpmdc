@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PMDC - NFS-E</title>
+        <title>PMDC - NFS-e</title>
         
         <style>
             @font-face {
@@ -107,33 +107,20 @@
         <div class="menu-links">
             <a href="http://127.0.0.1:5500/sitee.html">Home</a>
             <a href="http://127.0.0.1:5500/siteatendimento.html">Atendimento</a>
-
-            <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Organograma</a>
-            <a href="https://duquedecaxias.rj.gov.br/portal/boletim-oficial.html">Boletim Oficial</a>
-            <a href="http://127.0.0.1:5500/siteconteudo.html">Conteúdos</a>
-            <a href="https://duquedecaxias.rj.gov.br/manutencao_pmdc/index.html">Secretarias</a>
-            <a href="#">Balanços</a>
-            <a href="https://duquedecaxias.rj.gov.br/noticias/1">Notícias</a>
+            <a href="http://127.0.0.1:5500/sitelegislacao.html">Legislação</a>
+            <a href="http://127.0.0.1:5500/siteconteudo.html">Formulários</a> 
             <a href="https://transparencia.duquedecaxias.rj.gov.br/perguntas-frequentes.php?conteudo=75">Perguntas Frequentes</a>
             <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
         </div>
     </nav>
 
     <div class="page-title">
-        <h1>NFS-E</h1>
-        <br></br>
-        <p class="description">
-            A Nota Fiscal de Serviço Eletrônica é um documento exclusivamente digital com o objetivo de registrar as operações relativas à prestação de serviços, como, por exemplo,
-            <br>
-            academias, escolas particulares, creches, cursos de idiomas, construtores, hotéis, oficinas, empresas de limpezas, dentre outros.
-            <br>
-            É obrigatório a todos os prestadores de serviços estabelecidos no município. O prestador poderá escolher o emissor de sua escolha desde que atenda ao padrão ABRASF 2.0.
-        </p>
+        <h1>NFS-e</h1>
     </div>
 
     <div class="search-container">
         <form class="search-form" onsubmit="return false;">
-            <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar..." oninput="filterOptions()">
+            <input type="text" class="search-input" id="searchInput" placeholder="O que você procura?" oninput="filterOptions()">
             <button type="submit" class="search-button">
                 <i class="fas fa-search"></i>
             </button>
@@ -152,7 +139,7 @@
         <div class="option-card" data-search="verificar autenticidade">
             <a href="https://www.issnetonline.com.br/duquedecaxias/online/NotaDigital/VerificaAutenticidade.aspx" class="process-link" target="_blank">
                 <i class="fas fa-clipboard-list"></i>
-                <h2>Verificar Autenticidade</h2>
+                <h2>Cidadão Verificar NFS-e</h2>
             </a>
         </div>
         
@@ -160,7 +147,7 @@
         <div class="option-card" data-search="ctm tributo">
             <a href="https://www.issnetonline.com.br/duquedecaxias/online/NotaDigital/VerificaRT.aspx" class="process-link" target="_blank">
                 <i class="fas fa-search-dollar"></i>
-                <h2>Conversão RPS</h2>
+                <h2>Consultar Conversão RPS</h2>
             </a>
         </div>
 
@@ -174,14 +161,14 @@
         <div class="option-card" data-search="manual documentacao ajuda">
             <a href="https://www.issnetonline.com.br/duquedecaxias/online/SolicitacaoCadastro/Cadastro.aspx?tipo=avulso "" class="process-link" target="_blank">
                 <i class="fas fa-book"></i>
-                <h2>Solicitar Cadastro</h2>
+                <h2>Solicitar Cadastro AVULSO</h2>
             </a>
         </div>
 
         <div class="option-card" data-search="cadastro contribuinte prestador servico">
             <a href="https://www.issnetonline.com.br/duquedecaxias/online/SolicitacaoCadastro/ConsultarSolicitacaoCadastral.aspx" class="process-link" target="_blank">
                 <i class="fas fa-user-plus"></i>
-                <h2>Acompanhar Solicitação de Cadastro</h2>
+                <h2>Acompanhar Solicitação de Cadastro AVULSO</h2>
             </a>
         </div>
 
@@ -191,32 +178,11 @@
                 <h2>Cancelar NFSe</h2>
             </a>
         </div>
-
-        <div class="option-card" data-search="ctm tributo">
-            <a href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2002/166/1664/lei-ordinaria-n-1664-2002-institui-o-novo-codigo-tributario-do-municipio" class="process-link" target="_blank">
-                <i class="fas fa-search-dollar"></i>
-                <h2>Código Tributário Municipal</h2>
-            </a>
-        </div>
-
-        <div class="option-card" data-search="legislacao normativas leis">
-            <a href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2010/233/2332/lei-ordinaria-n-2332-2010-institui-a-nota-fiscal-de-servicos-eletronica-nfs-e-e-da-outras-providencias" class="process-link" target="_blank">
-                <i class="fas fa-gavel"></i>
-                <h2>Legislação da NFS-E </h2>
-            </a>
-        </div>
-
-        <div class="option-card" data-search="dte legislaçao">
-            <a href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2018/291/2918/lei-ordinaria-n-2918-2018-institui-o-domicilio-tributario-eletronico-dt-e-e-altera-dispositivos-da-lei-municipal-n-1664-de-28-de-novembro-de-2002-codigo-tributario-municipal" class="process-link" target="_blank">
-                <i class="fas fa-gavel"></i>
-                <h2>Legislação do DT-E</h2>
-            </a>
-        </div>
-
-        <div class="option-card" data-search="perguntas frequentes duvidas faq help">
-            <a href="https://www.issnetonline.com.br/duquedecaxias/online/download/perguntas_frequentes.pdf" class="process-link" target="_blank">
-                <i class="fas fa-question-circle"></i>
-                <h2>Dúvidas Frequentes</h2>
+        
+        <div class="option-card" data-search="legislacao" onclick="window.open('http://127.0.0.1:5500/sitelegislacao.html', '_blank')">
+            <i class="fas fa-hammer"></i>
+            <a href= class="process-link" target="_blank">
+                <h2>Legislação</h2>
             </a>
         </div>
 
@@ -227,22 +193,28 @@
             </a>
         </div>
     </div>
+    <p class="description">
+        A Nota Fiscal de Serviço Eletrônica é um documento exclusivamente digital com o objetivo de registrar as operações relativas à prestação de serviços, como, por exemplo,
+        <br>
+        academias, escolas particulares, creches, cursos de idiomas, construtores, hotéis, oficinas, empresas de limpezas, dentre outros.
+        <br>
+        É obrigatório a todos os prestadores de serviços estabelecidos no município. O prestador poderá escolher o emissor de sua escolha desde que atenda ao padrão ABRASF 2.0.
+    </p>
     <div class="side-menu">
         <div class="menu-header">
             <h2>MENU</h2>
         </div>
         <div class="menu-items">
-            <a href="http://127.0.0.1:5500/sitee.html"><i class="fas fa-home"></i> Home</a>
+            <a href="http://127.0.0.1:5500/sitee.html"><i class="fas fa-home"></i> Página inicial</a>
             <a href="http://127.0.0.1:5500/siteiss.html"><i class="fas fa-file-contract"></i> ISS</a>
             <a href="http://127.0.0.1:5500/siteiptu.html"><i class="fas fa-money-bill"></i> IPTU</a>
             <a href="http://127.0.0.1:5500/siteitbi.html"><i class="fas fa-dollar-sign"></i> ITBI</a>
-            <a href="http://127.0.0.1:5500/sitenfse.html"><i class="fas fa-building"></i> NFS-E</a>
+            <a href="http://127.0.0.1:5500/sitenfse.html"><i class="fas fa-building"></i> NFS-e</a>
             <a href="http://127.0.0.1:5500/sitealvara.html"><i class="fas fa-chart-bar"></i> Alvará</a>
             <a href="http://consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm"><i class="fas fa-file-alt"></i> Consulta de Processos</a>
             <a href="http://127.0.0.1:5500/sitecertidoes.html"><i class="fas fa-clipboard-list"></i> Certidões</a>
             <a href="http://127.0.0.1:5500/siteplantaofiscal.html"><i class="fas fa-university"></i> Plantão Fiscal</a>
             <a href="http://127.0.0.1:5500/sitelegislacao.html"><i class="fas fa-hammer"></i> Legislação</a>
-            <a href="https://transparencia.duquedecaxias.rj.gov.br/plano-plurianual.php"><i class="fas fa-flag"></i> Plano Plurianual</a>
         </div>
     </div>
     <!-- Rodapé -->

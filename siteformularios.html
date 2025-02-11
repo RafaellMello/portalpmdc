@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PMDC - Formulários</title>
+        
+        <style>
+            @font-face {
+                font-family: 'AaltoSansEssentialLight';
+                src: url('AaltoSansEssential.ttf') format('truetype');
+                font-display: swap;
+            }
+
+            .option-card {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .option-card a.process-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: inherit;
+                z-index: 1;
+            }
+
+            .option-card i {
+                position: relative;
+                z-index: 2;
+            }
+
+            .option-card h2 {
+                position: relative;
+                z-index: 2;
+            }
+
+            .page-title {
+                background-color: #00AFEF;
+                color: white;
+                text-align: center;
+                padding: 20px 30px 30px 30px;
+            }
+
+            .page-title h1 {
+                font-size: 45px;
+                font-family: 'AaltoSansEssentialLight', Arial, Helvetica, sans-serif !important;
+                font-weight: normal;
+                margin-bottom: 20px;
+                padding-top: 0px;
+            }
+
+            .description {
+                max-width: 1190px;
+                margin: 0 auto;
+                line-height: 1.5;
+                font-size: 16px;
+                padding-bottom: 0px;
+            }
+        </style>
+        
+        <link rel="icon" type="image/png" href="logofavicon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="tel:+552127732600" class="top-bar-item">
+                <i class="fas fa-phone"></i>
+                (21) 2773-6200
+            </a>
+            <a href="https://duquedecaxias.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-desktop"></i>
+                Portal da Prefeitura
+            </a>
+            <a href="https://saude.duquedecaxias.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-hospital"></i>
+                Portal da Saúde
+            </a>
+            <a href="https://www.cmdc.rj.gov.br/" class="top-bar-item">
+                <i class="fas fa-landmark"></i>
+                Câmara Municipal
+            </a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php" class="top-bar-item">
+                <i class="fas fa-headset"></i>
+                Ouvidoria
+            </a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/" class="top-bar-item">
+                <i class="fas fa-history"></i>
+                Versão anterior
+            </a>
+            <a href="#" class="top-bar-item">
+                <i class="fas fa-sitemap"></i>
+                Mapa do site
+            </a>
+            <a href="https://duquedecaxias.rj.gov.br/pagina/servicos/identidade-visual" class="top-bar-item">
+                <i class="fas fa-palette"></i>
+                Identidade Visual
+            </a>
+            <button onclick="toggleContrast()" class="top-bar-item contrast-button">
+                <i class="fas fa-adjust"></i>
+                Alto contraste
+            </button>
+        </div>
+    </div>
+
+    <nav class="main-menu">
+        <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
+        <div class="menu-links">
+            <a href="http://127.0.0.1:5500/sitee.html">Home</a>
+            <a href="http://127.0.0.1:5500/siteatendimento.html">Atendimento</a>
+            <a href="http://127.0.0.1:5500/sitelegislacao.html">Legislação</a>
+            <a href="http://127.0.0.1:5500/siteformularios.html">Formulários</a> 
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/perguntas-frequentes.php?conteudo=75">Perguntas Frequentes</a>
+            <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
+        </div>
+    </nav>
+
+    <div class="page-title">
+        <h1>Formulários</h1>
+    </div>
+
+    <div class="search-container">
+        <form class="search-form" onsubmit="return false;">
+            <input type="text" class="search-input" id="searchInput" placeholder="O que você procura?" oninput="filterOptions()">
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+    
+    <div class="grid-container" id="optionsGrid">
+        <!-- Primeira linha -->
+        <div class="option-card" data-search="emitir guias">
+            <a href="https://www.tributosnet.com.br/duquedecaxias/portal/Modulos/EmissaoGuia.aspx?m=502" class="process-link" target="_blank">
+                <i class="fas fa-file-contract"></i>
+                <h2>Emitir Guias</h2>
+            </a>
+        </div>
+        
+        <div class="option-card" data-search="impressao impressão cadastral">
+            <a href="https://www.tributosnet.com.br/duquedecaxias/portal/Modulos/EmitirBCI.aspx?m=2982" class="process-link" target="_blank">
+                <i class="fas fa-dollar-sign"></i>
+                <h2>Impressão Cadastral Imobiliário</h2>
+            </a>
+        </div>
+        
+        <div class="option-card" data-search="certidao negativa certidão">
+            <a href="https://www.tributosnet.com.br/duquedecaxias/portal/Modulos/ListaContribuinteAlvara.aspx?tipo=certidao&m=2975" class="process-link" target="_blank">
+                <i class="fas fa-building"></i>
+                <h2>Certidão Negativa</h2>
+            </a>
+        </div>
+        
+
+        <div class="option-card" data-search="legislacao leis">
+            <a href="http://127.0.0.1:5500/sitelegislacao.html" class="process-link" target="_blank">
+                <i class="fas fa-hammer"></i>
+                <h2>Legislação</h2>
+            </a>
+        </div>
+    </div>
+    <div>
+        <p class="description">O Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU) é devido por quem possui a propriedade, o domínio útil ou a posse de imóvel situado na zona urbana de Duque de Caxias. O valor final dependerá do valor venal do imóvel, da situação legal bem como da localização, tamanho, topografia e outros fatores.</p>
+    </div>
+    <div class="side-menu">
+        <div class="menu-header">
+            <h2>MENU</h2>
+        </div>
+        <div class="menu-items">
+            <a href="http://127.0.0.1:5500/sitee.html"><i class="fas fa-home"></i> Página inicial</a>
+            <a href="http://127.0.0.1:5500/siteiss.html"><i class="fas fa-file-contract"></i> ISS</a>
+            <a href="http://127.0.0.1:5500/siteiptu.html"><i class="fas fa-money-bill"></i> IPTU</a>
+            <a href="http://127.0.0.1:5500/siteitbi.html"><i class="fas fa-dollar-sign"></i> ITBI</a>
+            <a href="http://127.0.0.1:5500/sitenfse.html"><i class="fas fa-building"></i> NFS-e</a>
+            <a href="http://127.0.0.1:5500/sitealvara.html"><i class="fas fa-chart-bar"></i> Alvará</a>
+            <a href="http://consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm"><i class="fas fa-file-alt"></i> Consulta de Processos</a>
+            <a href="http://127.0.0.1:5500/sitecertidoes.html"><i class="fas fa-clipboard-list"></i> Certidões</a>
+            <a href="http://127.0.0.1:5500/siteplantaofiscal.html"><i class="fas fa-university"></i> Plantão Fiscal</a>
+            <a href="http://127.0.0.1:5500/sitelegislacao.html"><i class="fas fa-hammer"></i> Legislação</a>
+        </div>
+    </div>
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONTEÚDOS</h3>
+                <a href="#">Ata Registro de Preço</a>
+                <a href="#">Autarquias</a>
+                <a href="#">Cadastro de Fornecedores</a>
+                <a href="#">Central de Regulação Saúde</a>
+                <a href="#">Conselho Municipal de Saúde</a>
+                <a href="#">Conv. Governo Federal</a>
+                <a href="#">COVID-19</a>
+                <a href="#">Dados Abertos</a>
+                <a href="#">Despesas</a>
+                <a href="#">Despesas com recursos da CEDAE</a>
+                <a href="#">Dívida Ativa</a>
+                <a href="#">Escolas Municipais</a>
+                <a href="#">Estatísticas de Acesso</a>
+                <a href="#">Fundos Municipais</a>
+                <a href="#">Gastos com Diárias</a>
+                <a href="#">Leis de Acesso a Informação</a>
+                <a href="#">LGPD</a>
+                <a href="#">Licitações</a>
+                <a href="#">Obras Públicas</a>
+                <a href="#">Orçamento</a>
+                <a href="#">Ouvidoria</a>
+                <a href="#">Patrimônios</a>
+                <a href="#">PDDE</a>
+                <a href="#">Pesquisas de Leis</a>
+                <a href="#">Plano Plurianual</a>
+                <a href="#">Prestação de Contas</a>
+                <a href="#">Radar da Transparência</a>
+                <a href="#">Receitas</a>
+                <a href="#">Recursos Financeiros</a>
+                <a href="#">Relatórios-LRF</a>
+                <a href="#">Rem. dos Servidores</a>
+                <a href="#">SIAFIC - DECRETO FEDERAL 10.540/20</a>
+                <a href="#">Termos e Contratos</a>
+                <a href="#">Unidades de Saúde</a>
+            </div>
+            <div class="footer-section">
+                <h3>OUTROS PORTAIS</h3>
+                <a href="#">Governo Federal</a>
+                <a href="#">Senado</a>
+                <a href="#">Câmara Federal</a>
+                <a href="#">Governo Estadual</a>
+                <a href="#">Leis Municipais</a>
+            </div>
+            <div class="footer-section">
+                <h3>FALE CONOSCO</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>21 2773-6213</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>ouvidoria@duquedecaxias.rj.gov.br</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Alameda Esmeralda 206<br>
+                        Jardim Primavera, Duque de Caxias/RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Praça Roberto da Silveira, 31 - 2º andar<br>
+                        Centro, Duque de Caxias/RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Segunda - Sexta, 9h - 17h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="institutional-footer">
+            <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
+            <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
+        </div>
+
+        <div class="development-credits">
+            <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia. </p>
+        </div>
+    </footer>
+
+    <script>
+        function filterOptions() {
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll('.option-card');
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-search').toLowerCase();
+                if (searchData.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
