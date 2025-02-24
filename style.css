@@ -798,3 +798,9 @@
             top: 320px;
         }
         
+/* tirei o rodapé */
+@media (max-width: 600px) {
+    footer {
+        display: none;
+    }
+}
