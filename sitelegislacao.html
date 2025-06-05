@@ -108,7 +108,7 @@
 }
 
 .accordion-header {
-  background-color: #2980b9;
+  background-color: #1c638b;
   cursor: pointer;
   padding: 15px;
   font-size: 24px;
@@ -119,7 +119,7 @@
 }
 
 .accordion-header:hover {
-  background-color: #1c638b;
+  background-color: #2980b9;
 }
 
 .accordion-content {
@@ -325,46 +325,60 @@
           
           <script>
   function toggleAccordion(header) {
-    const content = header.nextElementSibling;
-    const isOpen = content.classList.contains("open");
+  const content = header.nextElementSibling;
+  const isOpen = content.classList.contains("open");
 
-    if (isOpen) {
-      // FECHAR
-      const currentHeight = content.scrollHeight;
-      content.style.height = currentHeight + "px"; // define altura atual
+  // Fecha todos os outros instantaneamente
+  document.querySelectorAll(".accordion-content.open").forEach((otherContent) => {
+    if (otherContent !== content) {
+      otherContent.classList.remove("open");
+      otherContent.style.transition = "none";         // remove transição
+      otherContent.style.height = "0px";
+      otherContent.style.display = "none";
 
-      // Reflow antes de colapsar
-      requestAnimationFrame(() => {
-        content.style.height = "0px";
-      });
-
-      content.addEventListener("transitionend", function handleClose(e) {
-        if (e.propertyName === "height") {
-          content.classList.remove("open");
-          content.style.display = "none";
-          content.removeEventListener("transitionend", handleClose);
-        }
-      });
-    } else {
-      // ABRIR
-      content.style.display = "block";
-      content.style.height = "0px";
-
-      // Força reflow
-      content.offsetHeight;
-
-      const fullHeight = content.scrollHeight + "px";
-      content.style.height = fullHeight;
-      content.classList.add("open");
-
-      content.addEventListener("transitionend", function handleOpen(e) {
-        if (e.propertyName === "height") {
-          content.style.height = "auto"; // permite crescimento automático depois
-          content.removeEventListener("transitionend", handleOpen);
-        }
-      });
+      // força reativação da transição para próximos usos
+      void otherContent.offsetWidth;                  // força reflow
+      otherContent.style.transition = "";             // restaurar transição
     }
+  });
+
+  // Alterna o accordion clicado
+  if (isOpen) {
+    // FECHAR com animação
+    const currentHeight = content.scrollHeight;
+    content.style.height = currentHeight + "px";
+
+    requestAnimationFrame(() => {
+      content.style.height = "0px";
+    });
+
+    content.addEventListener("transitionend", function handleClose(e) {
+      if (e.propertyName === "height") {
+        content.classList.remove("open");
+        content.style.display = "none";
+        content.removeEventListener("transitionend", handleClose);
+      }
+    });
+  } else {
+    // ABRIR com animação
+    content.style.display = "block";
+    content.style.height = "0px";
+    content.offsetHeight; // força reflow
+
+    const fullHeight = content.scrollHeight + "px";
+    content.style.height = fullHeight;
+    content.classList.add("open");
+
+    content.addEventListener("transitionend", function handleOpen(e) {
+      if (e.propertyName === "height") {
+        content.style.height = "auto";
+        content.removeEventListener("transitionend", handleOpen);
+      }
+    });
   }
+}
+
+
 </script>
 
 

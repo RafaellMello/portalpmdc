@@ -928,3 +928,22 @@ h2 {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.text-dos-botoes {
+  max-width: 600px;       /* mantém a largura máxima */
+  margin-left: 21%;       /* margem esquerda maior para deslocar à esquerda */
+  margin-right: auto;     /* margem direita automática para manter o alinhamento */
+  margin-top: 20px;
+  margin-bottom: 20px;    /* margens verticais */
+  padding: 0 15px;        /* padding lateral */
+}
+
+
+.text-dos-botoes p {
+  text-align: justify;
+  text-justify: inter-word;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
