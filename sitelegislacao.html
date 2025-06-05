@@ -12,7 +12,7 @@
             <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
         </div>
     </head>
-<body>
+<body class="sitelegislacao">
     <div class="top-bar">
         <div class="top-bar-content">
             <a href="tel:+552127732600" class="top-bar-item">
@@ -58,7 +58,7 @@
         <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
         <div class="menu-links">
             <a href="sitee.html">Página Inicial</a>
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VXtbPIDOxeKlHzg?e=VS2POt">Legislação</a>
+            <a href="sitelegislacao.html">Legislação</a>
             <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF">Formulários</a> 
             <a href="https://transparencia.duquedecaxias.rj.gov.br/perguntas-frequentes.php?conteudo=75">Perguntas Frequentes</a>
             <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
@@ -78,7 +78,7 @@
         </form>
     </div>
 
-    <div class="side-menu">
+    <div class="side-menu side-menu-legislacao">
         <div class="menu-header">
             <h2>MENU</h2>
         </div>
@@ -89,21 +89,22 @@
             <a href="siteitbi.html"><i class="fas fa-dollar-sign"></i> ITBI</a>
             <a href="sitenfse.html"><i class="fas fa-building"></i> NFS-e</a>
             <a href="sitealvara.html"><i class="fas fa-chart-bar"></i> Alvará</a>
-            <a href="http://consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm"><i class="fas fa-file-alt"></i> Consulta de Processos</a>
+            <a href="consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm"><i class="fas fa-file-alt"></i> Consulta de Processos</a>
             <a href="sitecertidoes.html"><i class="fas fa-clipboard-list"></i> Certidões</a>
             <a href="siteplantaofiscal.html"><i class="fas fa-university"></i> Plantão Fiscal</a>
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VXtbPIDOxeKlHzg?e=VS2POt"><i class="fas fa-hammer"></i> Legislação</a>
+            <a href="sitelegislacao.html"><i class="fas fa-hammer"></i> Legislação</a>
             <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF"><i class="fas fa-paperclip"></i> Formulários</a>
         </div>
     </div>
 
     <style>
         .accordion {
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 6px;
   margin-bottom: 10px;
   overflow: hidden;
-  margin-left: 250px;
+  margin-left: 252px;
+  background: #fdfdfd;
 }
 
 .accordion-header {
@@ -114,6 +115,7 @@
   font-weight: bold;
   color: #ffffff;
   border-bottom: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .accordion-header:hover {
@@ -121,24 +123,32 @@
 }
 
 .accordion-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   display: none;
-  padding: 15px;
-  background: #fdfdfd;
-  font-size: 16px;
 }
+
+.accordion-content.open {
+  display: block;
+}
+
 
 .document-entry {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  align-items: baseline;
 }
 
 .document-entry a {
   font-weight: bold;
   color: #2980b9;
   text-decoration: none;
-  margin-right: 10px; /* Adiciona um pequeno espaço à direita do link */
-  margin-bottom: 10px; /* Adiciona o espaçamento vertical entre os links */
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .document-entry a:hover {
@@ -149,7 +159,7 @@
   color: #000000;
   font-size: 16px;
   text-align: justify;
-  flex-grow: 1; /* Faz com que a descrição ocupe o restante do espaço disponível */
+  flex-grow: 1;
 }
 
 .grid-container {
@@ -193,12 +203,56 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .accordion {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  .accordion-header {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .accordion-content {
+    text-align: left;
+    padding: 12px;
+  }
+
+  .document-entry {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .document-entry a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .document-description {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .accordion:nth-of-type(2) {
+  margin-top: 40px;
+}
+
+}
+
       </style>
     </head>
     <body>
     
         <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">2025</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)">Leis gerais</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="pdfs/DECRETO 6654.pdf" target="_blank" rel="noopener">Decreto 6654 - </a>
@@ -247,16 +301,72 @@
               </div>
             </div>
           </div>
+
+           <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">ITBI</div>
+            <div class="accordion-content">
+              <div class="document-entry">
+                <a class="fake-link" href="https://leismunicipais.com.br/codigo-tributario-duque-de-caxias-rj" target="_blank" rel="noopener">CTM, Art. 85º ao 103º - </a>
+                <div class="document-description">Estabelece normas sobre lançamento, base de cálculo, isenções, cobranças, arrecadação e fiscalização do IPTU.</div>
+            </div>
+
+            <div class="document-entry">
+                <a class="fake-link" href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2011/242/2416/lei-ordinaria-n-2416-2011-concede-isencao-do-imposto-sobre-a-transmissao-de-bens-imoveis-e-de-direitos-a-eles-relativos-realizada-inter-vivos-por-ato-oneroso-itbi-para-a-aquisicao-de-imoveis-oriundos-de-empreendimentos-habitacionais-populares-de-interesse-social-e-de-arrendamento-residencial-vinculados-a-politica-habitacional-municipal-estadual-e-federal?q=2416%2F2011" target="_blank" rel="noopener">Lei nº. 2416/2011 - </a>
+                <div class="document-description">Isenção para empreendimentos populares </div>
+            </div>
+
+            <div class="document-entry">
+                <a class="fake-link" href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2019/298/2971/lei-ordinaria-n-2971-2019-dispoe-sobre-a-isencao-de-imposto-sobre-a-transmissao-inter-vivos-de-bens-imoveis-itbi-para-os-imoveis-que-menciona-integrantes-do-programa-minha-casa-minha-vida?q=2971%2F2019" target="_blank" rel="noopener">Lei nº. 2971/2019 - </a>
+                <div class="document-description">Isenção Minha Casa Minha Vida</div>
+            </div>
+          </div>
           
           </div>
           
           <script>
-            function toggleAccordion(header) {
-              const content = header.nextElementSibling;
-              const isOpen = content.style.display === "block";
-              content.style.display = isOpen ? "none" : "block";
-            }
-          </script>
+  function toggleAccordion(header) {
+    const content = header.nextElementSibling;
+    const isOpen = content.classList.contains("open");
+
+    if (isOpen) {
+      // FECHAR
+      const currentHeight = content.scrollHeight;
+      content.style.height = currentHeight + "px"; // define altura atual
+
+      // Reflow antes de colapsar
+      requestAnimationFrame(() => {
+        content.style.height = "0px";
+      });
+
+      content.addEventListener("transitionend", function handleClose(e) {
+        if (e.propertyName === "height") {
+          content.classList.remove("open");
+          content.style.display = "none";
+          content.removeEventListener("transitionend", handleClose);
+        }
+      });
+    } else {
+      // ABRIR
+      content.style.display = "block";
+      content.style.height = "0px";
+
+      // Força reflow
+      content.offsetHeight;
+
+      const fullHeight = content.scrollHeight + "px";
+      content.style.height = fullHeight;
+      content.classList.add("open");
+
+      content.addEventListener("transitionend", function handleOpen(e) {
+        if (e.propertyName === "height") {
+          content.style.height = "auto"; // permite crescimento automático depois
+          content.removeEventListener("transitionend", handleOpen);
+        }
+      });
+    }
+  }
+</script>
+
 
     <!-- Rodapé -->
     <footer>
