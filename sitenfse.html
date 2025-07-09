@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <!-- Desenvolvido por -->
+         <!-- Rafael Mello (github/RafaelLMello) -->
+          <!-- e Enzo Suzula (github/suzulaenzo) -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,74 +56,26 @@
 
         </style>
         
-        <link rel="icon" type="image/png" href="logofavicon.png">
+        <link rel="icon" type="image/png" href="img/logofavicon.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
 <body class="sitenfse">
-    <div class="top-bar">
-        <div class="top-bar">
-            <div class="top-bar-content">
-                <a href="tel:+552127732600" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    (21) 2773-6200
-                </a>
-                <a href="https://duquedecaxias.rj.gov.br/" class="top-bar-item">
-                    <i class="fas fa-desktop"></i>
-                    Portal da Prefeitura
-                </a>
-                <a href="https://saude.duquedecaxias.rj.gov.br/" class="top-bar-item">
-                    <i class="fas fa-hospital"></i>
-                    Portal da Saúde
-                </a>
-                <a href="https://www.cmdc.rj.gov.br/" class="top-bar-item">
-                    <i class="fas fa-landmark"></i>
-                    Câmara Municipal
-                </a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php" class="top-bar-item">
-                    <i class="fas fa-headset"></i>
-                    Ouvidoria
-                </a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/" class="top-bar-item">
-                    <i class="fas fa-history"></i>
-                    Versão anterior
-                </a>
-                <a href="#" class="top-bar-item">
-                    <i class="fas fa-sitemap"></i>
-                    Mapa do site
-                </a>
-                <a href="https://duquedecaxias.rj.gov.br/pagina/servicos/identidade-visual" class="top-bar-item">
-                    <i class="fas fa-palette"></i>
-                    Identidade Visual
-                </a>
-                <button onclick="toggleContrast()" class="top-bar-item contrast-button">
-                    <i class="fas fa-adjust"></i>
-                    Alto contraste
-                </button>
-            </div>
-        </div>
-    </div>
-
 
     <nav class="main-menu">
-        <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
+        <img src="img/logo.png" alt="Logo Duque de Caxias" class="logo">
         <div class="menu-links">
             <a href="sitee.html">Página Inicial</a>
             <a href="sitelegislacao.html">Legislação</a>
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF">Formulários</a> 
+            <a href="siteformularios.html">Formulários</a> 
             <a href="https://transparencia.duquedecaxias.rj.gov.br/perguntas-frequentes.php?conteudo=75">Perguntas Frequentes</a>
-            <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
+            <a href="siteplantaofiscal.html">Fale conosco</a>
         </div>
     </nav>
 
     <div class="page-title">
         <h1>NFS-e</h1>
-        <br></br>
-        <p class="description">
-            A Nota Fiscal de Serviço Eletrônica é um documento exclusivamente digital com o objetivo de registrar as operações relativas à prestação de serviços, como, por exemplo,
-            <br>academias, escolas particulares, creches, cursos de idiomas, construtores, hotéis, oficinas, empresas de limpezas, dentre outros.
-            <br>É obrigatório a todos os prestadores de serviços estabelecidos no município. O prestador poderá escolher o emissor de sua escolha desde que atenda ao padrão ABRASF 2.0.
-        </p>
+
     </div>
 
     <div class="search-container">
@@ -131,7 +86,7 @@
             </button>
         </form>
     </div>
-    
+
     <div class="grid-container" id="optionsGrid">
         <!-- Primeira linha -->
         <div class="option-card" data-search="emissao ">
@@ -185,32 +140,119 @@
         </div>
 
         <div class="option-card" data-search="formularios">
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF" class="process-link">
+            <a href="siteformularios.html" class="process-link">
                 <i class="fas fa-headset"></i>
                 <h2>Formulários</h2>
             </a>
         </div>
     </div>
-    <div class="side-menu side-menu-nfse">
-        <div class="menu-header">
-            <h2>MENU</h2>
-        </div>
-        <div class="menu-items">
-            <a href="sitee.html"><i class="fas fa-home"></i> Página Inicial</a>
-            <a href="siteiss.html"><i class="fas fa-file-contract"></i> ISS</a>
-            <a href="siteiptu.html"><i class="fas fa-money-bill"></i> IPTU</a>
-            <a href="siteitbi.html"><i class="fas fa-dollar-sign"></i> ITBI</a>
-            <a href="sitenfse.html"><i class="fas fa-building"></i> NFS-e</a>
-            <a href="sitealvara.html"><i class="fas fa-chart-bar"></i> Alvará</a>
-            <a href="consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm"><i class="fas fa-file-alt"></i> Consulta de Processos</a>
-            <a href="sitecertidoes.html"><i class="fas fa-clipboard-list"></i> Certidões</a>
-            <a href="siteplantaofiscal.html"><i class="fas fa-university"></i> Plantão Fiscal</a>
-            <a href="sitelegislacao.html"><i class="fas fa-hammer"></i> Legislação</a>
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF"><i class="fas fa-paperclip"></i> Formulários</a>
-        </div>
+  
+    <hr class="section-divider">
+
+    <div class="text-content-after-cards">
+        <br>
+<h4>NSF-e</h4>
+<p>
+    A Nota Fiscal de Serviço Eletrônica é um documento exclusivamente digital com o objetivo de registrar as operações relativas à prestação de serviços, como, por exemplo, 
+    academias, escolas particulares, creches, cursos de idiomas, construtores, hotéis, oficinas, empresas de limpezas, dentre outros. 
+    É obrigatório a todos os prestadores de serviços estabelecidos no município. O prestador poderá escolher o emissor de sua escolha desde que atenda ao padrão ABRASF 2.0. 
+    Para emitir nota fiscal regularmente, é obrigatório ter inscrição municipal.
+</p>
+<br>
+<h4>Nota Avulsa</h4>
+<p>
+    A nota fiscal de serviço avulsa poderá ser emitida por pessoas físicas residentes no município e por pessoas jurídicas não prestadoras de serviço estabelecidas no município. A emissão da nota avulsa será por abertura de processo administrativo e não poderá ultrapassar 03 notas ao ano.
+</p>
+<p>
+    A abertura do processo administrativo será feita no protocolo da Secretaria de Fazenda, na Praça Roberto Silveira, n.º 31 – setor de Protocolo.
+</p>
+<br>
+<h4>MEI</h4>
+<p>O MEI é obrigado a emitir nota fiscal apenas nas seguintes situações:</p>
+<ul>
+    <li>Sempre que vender ou prestar serviços para outras pessoas jurídicas (empresas ou governo), independentemente do tamanho delas;</li>
+    <li>Quando seus clientes (pessoa física) solicitarem, de acordo com o Código de Defesa do Consumidor;</li>
+    <li>Sempre que precisar enviar seu produto para o cliente, independente se for empresa ou pessoa física, como por exemplo venda pela internet, telefone ou catálogo.</li>
+</ul>
+<p>
+    A emissão da Nota Fiscal de Serviço para MEI é feita exclusivamente pelo portal NFS-e do gov.br:<br>
+    <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/servicos-para-mei/nota-fiscal/nota-fiscal-de-servico-eletronica-nfs-e" target="_blank">Acessar portal NFS-e</a>
+</p>
+<br>
+<h4>Cancelamento ou Substituição de Nota Fiscal de Serviço</h4>
+<p>
+    O requerimento de cancelamento e/ou substituição de NFS-e deve ser realizado no sistema de emissão, de acordo com as instruções constantes na </a><a href="pdfs/Port 024-2021 cancelamento de nota.pdf" target="_blank">Portaria 24/2021 </a></a>
+</p>
+<p>
+    <strong>Atenção:</strong> Para valores de nota acima de R$ 50.000,00 ou quando a nota tiver sido emitida há mais de 7 dias, deverá ser aberto processo administrativo na Praça Roberto Silveira, n° 31, 1° andar - Jardim 25 de Agosto, 25071-210 - Duque de Caxias, com pagamento de taxa de expediente e entrega de formulário próprio.
+</p>
+<br>
+<h4>Gerar Taxa de Expediente</h4>
+<p>
+    Acesse: <a href="https://www.tributosnet.com.br/duquedecaxias/portal/Modulos/Home.aspx" target="_blank">https://www.tributosnet.com.br/duquedecaxias/portal/Modulos/Home.aspx</a>
+</p>
+<p style="margin-bottom: 10px; margin-top: 10px;">
+    <strong>Passo a passo para EMISSÃO DE GUIA:</strong><br>
+    <ul>
+    <li style="margin-bottom: 10px;">No campo <strong>TIPO CADASTRO</strong>, selecione <strong>ECONÔMICO</strong>.</li>
+    <li style="margin-bottom: 10px;">Insira um elemento de pesquisa (Cód. Cadastro; Inscrição; CPF/CNPJ; ou Matrícula).</li>
+    <li style="margin-bottom: 10px;">Clique em <strong>AVANÇAR</strong>.</li>
+    <li style="margin-bottom: 10px;">Clique em <strong>GERAR TAXA</strong>.</li>
+    <li style="margin-bottom: 10px;">Depois, selecione <strong>TAXA DE EXPEDIENTE</strong>.</li>
+</ul>
+
+
+<br>
+<h4>RPS</h4>
+<p>
+    A solicitação de RPS é feita através do sistema da prefeitura no Portal do ISS:<br>
+    <a href="https://www.issnetonline.com.br/duquedecaxias/online/Login/Login.aspx?ReturnUrl=%2fduquedecaxias%2fonline" target="_blank">
+        Acessar Portal do ISS
+    </a>
+</p>
+<p>
+    A solicitação é feita através do menu <strong>Solicitação de Documentos Fiscais</strong>. 
+    <br>
+</br>O contribuinte efetua a primeira solicitação de RPS e o sistema calculará uma média de uso para realizar nova liberação automática.
+</p>
+
     </div>
+
+    <style>
+        h4 {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            .text-content-after-cards {
+                padding: 10px;
+                font-size: 15px;
+                word-break: break-word;
+                box-sizing: border-box;
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            .text-content-after-cards h4,
+            .text-content-after-cards p,
+            .text-content-after-cards ul,
+            .text-content-after-cards li {
+                word-break: break-word;
+                overflow-wrap: break-word;
+                font-size: 15px;
+                margin-left: 0;
+                margin-right: 0;
+                max-width: 100vw;
+            }
+            body.sitenfse {
+                margin: 0;
+                padding: 0;
+                width: 100vw;
+                overflow-x: hidden;
+            }
+        }
+    </style>
     <!-- Rodapé -->
-    <footer>
+   <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>CONTEÚDOS</h3>
@@ -230,6 +272,8 @@
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/gastos-diarias.php">Gastos com Diárias</a>
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/normativos.php">Leis de Acesso a Informação</a>
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/lgpd.php">LGPD</a>
+            </div>
+            <div class="footer-section">
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/licitacoes.php">Licitações</a>
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/obras-publicas.php">Obras Públicas</a>
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/orcamento.php">Orçamento</a>
@@ -249,6 +293,7 @@
             </div>
             <div class="footer-section">
                 <h3>OUTROS PORTAIS</h3>
+                <a href="https://duquedecaxias.rj.gov.br/">Prefeitura Municipal de Duque de Caxias</a>
                 <a href="http://www.portaltransparencia.gov.br/">Governo Federal</a>
                 <a href="http://www.senado.gov.br/transparencia/">Senado</a>
                 <a href="http://www2.camara.leg.br/transparencia/a-transparencia-na-camara">Câmara Federal</a>
@@ -257,32 +302,21 @@
             </div>
             <div class="footer-section">
                 <h3>FALE CONOSCO</h3>
-                <div class="contact-info">
+
                     <div class="contact-item">
-                        <i class="fas fa-phone" style= "margin-right: -3px;"></i>
-                        <p>21 2773-6213</p>
+                        <i class="fas fa-envelope"></i>
+                        <p>plantaofiscal.sefazplan@duquedecaxias.rj.gov.br</p>
                     </div>
 
                     <div class="contact-item">
-                        <i class="fas fa-envelope" style="position: relative; left: -0.08rem; margin-right: -3px;"></i>
-                        <p>ouvidoria@duquedecaxias.rj.gov.br</p>
+                       <i class="fas fa-map-marker-alt" style="font-size: 16px !important; width: 16px; height: 16px;"></i>
+
+                        <p>Praça Roberto da Silveira, 31 - Térreo<br>Jardim 25 de Agosto, Duque de Caxias/RJ</p>
                     </div>
 
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Alameda Esmeralda 206<br>
-                        Jardim Primavera, Duque de Caxias/RJ</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Praça Roberto da Silveira, 31 - 2º andar<br>
-                        Centro, Duque de Caxias/RJ</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-clock" style="position: relative; left: -0.10rem; margin-right: -3px;"></i>
-                        <p>Segunda - Sexta, 9h - 17h</p>
+                        <i class="fas fa-clock"></i>
+                  <p>Segunda - Sexta, 9h - 17h</p>
                     </div>
                 </div>
             </div>

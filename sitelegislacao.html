@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <!-- Desenvolvido por -->
+         <!-- Rafael Mello (github/RafaelLMello) -->
+          <!-- e Enzo Suzula (github/suzulaenzo) -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PMDC - Legislação</title>
-        <link rel="icon" type="image/png" href="logofavicon.png">
+        <link rel="icon" type="image/png" href="img/logofavicon.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <script src="https://vilibras.gov.br/app/vilibras.js"></script>
@@ -13,55 +16,15 @@
         </div>
     </head>
 <body class="sitelegislacao">
-    <div class="top-bar">
-        <div class="top-bar-content">
-            <a href="tel:+552127732600" class="top-bar-item">
-                <i class="fas fa-phone"></i>
-                (21) 2773-6200
-            </a>
-            <a href="https://duquedecaxias.rj.gov.br/" class="top-bar-item">
-                <i class="fas fa-desktop"></i>
-                Portal da Prefeitura
-            </a>
-            <a href="https://saude.duquedecaxias.rj.gov.br/" class="top-bar-item">
-                <i class="fas fa-hospital"></i>
-                Portal da Saúde
-            </a>
-            <a href="https://www.cmdc.rj.gov.br/" class="top-bar-item">
-                <i class="fas fa-landmark"></i>
-                Câmara Municipal
-            </a>
-            <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php" class="top-bar-item">
-                <i class="fas fa-headset"></i>
-                Ouvidoria
-            </a>
-            <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/" class="top-bar-item">
-                <i class="fas fa-history"></i>
-                Versão anterior
-            </a>
-            <a href="#" class="top-bar-item">
-                <i class="fas fa-sitemap"></i>
-                Mapa do site
-            </a>
-            <a href="https://duquedecaxias.rj.gov.br/pagina/servicos/identidade-visual" class="top-bar-item">
-                <i class="fas fa-palette"></i>
-                Identidade Visual
-            </a>
-            <button onclick="toggleContrast()" class="top-bar-item contrast-button">
-                <i class="fas fa-adjust"></i>
-                Alto contraste
-            </button>
-        </div>
-    </div>
 
     <nav class="main-menu">
-        <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
+        <img src="img/logo.png" alt="Logo Duque de Caxias" class="logo">
         <div class="menu-links">
             <a href="sitee.html">Página Inicial</a>
             <a href="sitelegislacao.html">Legislação</a>
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF">Formulários</a> 
+            <a href="siteformularios.html">Formulários</a> 
             <a href="https://transparencia.duquedecaxias.rj.gov.br/perguntas-frequentes.php?conteudo=75">Perguntas Frequentes</a>
-            <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
+            <a href="siteplantaofiscal.html">Fale conosco</a>
         </div>
     </nav>
 
@@ -78,33 +41,17 @@
         </form>
     </div>
 
-    <div class="side-menu side-menu-legislacao">
-        <div class="menu-header">
-            <h2>MENU</h2>
-        </div>
-        <div class="menu-items">
-            <a href="sitee.html"><i class="fas fa-home"></i> Página Inicial</a>
-            <a href="siteiss.html"><i class="fas fa-file-contract"></i> ISS</a>
-            <a href="siteiptu.html"><i class="fas fa-money-bill"></i> IPTU</a>
-            <a href="siteitbi.html"><i class="fas fa-dollar-sign"></i> ITBI</a>
-            <a href="sitenfse.html"><i class="fas fa-building"></i> NFS-e</a>
-            <a href="sitealvara.html"><i class="fas fa-chart-bar"></i> Alvará</a>
-            <a href="consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm"><i class="fas fa-file-alt"></i> Consulta de Processos</a>
-            <a href="sitecertidoes.html"><i class="fas fa-clipboard-list"></i> Certidões</a>
-            <a href="siteplantaofiscal.html"><i class="fas fa-university"></i> Plantão Fiscal</a>
-            <a href="sitelegislacao.html"><i class="fas fa-hammer"></i> Legislação</a>
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF"><i class="fas fa-paperclip"></i> Formulários</a>
-        </div>
-    </div>
-
     <style>
         .accordion {
   border: none;
   border-radius: 6px;
   margin-bottom: 10px;
   overflow: hidden;
-  margin-left: 252px;
   background: #fdfdfd;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  margin: 5px auto;
 }
 
 .accordion-header {
@@ -146,7 +93,7 @@
 .document-entry a {
   font-weight: bold;
   color: #2980b9;
-  text-decoration: none;
+  text-decoration: none; /* Remover sublinhado */
   margin-right: 10px;
   margin-bottom: 10px;
 }
@@ -199,7 +146,7 @@
 
 .fake-link {
   color: blue;
-  text-decoration: underline;
+  text-decoration: none; /* Remover sublinhado */
   cursor: pointer;
 }
 
@@ -301,10 +248,73 @@
               </div>
             </div>
           </div>
+              <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Alvará</div>
+            <div class="accordion-content">
+              <div class="document-entry">
+                <a class="fake-link" href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/decreto/2016/666/6654/decreto-n-6654-2016-regulamenta-a-concessao-alteracao-paralisacao-e-baixa-de-licenca-e-respectivos-alvaras-assim-compreendidos-o-provisorio-definitivo-transitorio-especial-e-inscricao-eventual-conforme-disposto-no-artigo-135-e-154-da-lei-municipal-1664-2002?q=6.654" target="_blank" rel="noopener">Decreto nº 6.654 -</a>
+                <div class="document-description">de 23 de março de 2016 - Regulamenta alvará provisório, definitivo, transitório, especial e eventual</div>
+            </div>
+
+              <div class="document-entry">
+                <a class="fake-link" href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2017/289/2887/lei-ordinaria-n-2887-2017-dispoe-sobre-a-responsabilidade-tributaria-das-empresas-e-organizacoes-que-prestem-servicos-a-cadeia-produtiva-de-petroleo-gas-etanol-energia-e-seus-derivados-no-territorio-do-municipio-de-duque-de-caxias-ainda-que-estabelecidas-em-outro-municipio-e-da-outras-providencias?q=2887" target="_blank" rel="noopener">LEI Nº 1.766 -</a>
+                <div class="document-description">de 27 de dezembro de 2003 Art 2º a 28 - Regulamenta o CTM.</div>
+            </div>
+
+            <div class="document-entry">
+              <a class="fake-link" href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2017/289/2887/lei-ordinaria-n-2887-2017-dispoe-sobre-a-responsabilidade-tributaria-das-empresas-e-organizacoes-que-prestem-servicos-a-cadeia-produtiva-de-petroleo-gas-etanol-energia-e-seus-derivados-no-territorio-do-municipio-de-duque-de-caxias-ainda-que-estabelecidas-em-outro-municipio-e-da-outras-providencias?q=2887" target="_blank" rel="noopener">Lei nº 2887  -</a>
+              <div class="document-description"> de 28 de dezembro de 2017, prestadores de serviços à Cadeia Produtiva de Petróleo, Gás, Etanol, Energia e seus Derivados.</div>
+          </div>
+
+            </div>
+            
+          </div>
+              <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">ISS</div>
+            <div class="accordion-content">
+              <div class="document-entry">
+                <a class="fake-link" href="https://leismunicipais.com.br/codigo-tributario-duque-de-caxias-rj" target="_blank" rel="noopener">CTM, Art. 44º ao 83º - </a>
+                <div class="document-description">Estabelece normas sobre lançamento, base de cálculo, isenções, cobranças, arrecadação e fiscalização do IPTU.</div>
+            </div>
+
+              <div class="document-entry">
+                <a class="fake-link" href="http://leismunicipa.is/rsnxh" target="_blank" rel="noopener">LEI Nº 1.766, DE 27 DE DEZEMBRO DE 2003 Art 2º a 28 - </a>
+                <div class="document-description">Regulamenta o CTM.</div>
+            </div>
+
+            </div>
+            
+          </div>
+           <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">IPTU</div>
+            <div class="accordion-content">
+              <div class="document-entry">
+                <a class="fake-link" href="https://leismunicipais.com.br/codigo-tributario-duque-de-caxias-rj" target="_blank" rel="noopener">CTM, Art. 44º ao 83º - </a>
+                <div class="document-description">Estabelece normas sobre lançamento, base de cálculo, isenções, cobranças, arrecadação e fiscalização do IPTU.</div>
+            </div>
+
+              <div class="document-entry">
+                <a class="fake-link" href="http://leismunicipa.is/rsnxh" target="_blank" rel="noopener">LEI Nº 1.766, DE 27 DE DEZEMBRO DE 2003 Art 2º a 28 - </a>
+                <div class="document-description">Regulamenta o CTM.</div>
+            </div>
+
+            <div class="document-entry">
+                <a class="fake-link" href="http://leismunicipa.is/rsnxh" target="_blank" rel="noopener">LEI nº 1.554, de 28 de dezembro de 2000 - </a>
+                <div class="document-description">Planta Genérica de Valores.</div>
+            </div>
+
+
+              <div class="document-entry">
+                <a class="fake-link" href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2022/331/3305/lei-ordinaria-n-3305-2022-dispoe-sobre-o-parcelamento-dos-creditos-tributarios-e-nao-tributarios-do-municipio-de-duque-de-caxias?q=PARCELAMENTO%20d%EDvida" target="_blank" rel="noopener">Lei Municipal 3.305/2022 - </a>
+                <div class="document-description">Institui o parcelamento de créditos tributários e não tributários.</div>
+            </div>
+            </div>
+          </div>
 
            <div class="accordion">
             <div class="accordion-header" onclick="toggleAccordion(this)">ITBI</div>
             <div class="accordion-content">
+
               <div class="document-entry">
                 <a class="fake-link" href="https://leismunicipais.com.br/codigo-tributario-duque-de-caxias-rj" target="_blank" rel="noopener">CTM, Art. 85º ao 103º - </a>
                 <div class="document-description">Estabelece normas sobre lançamento, base de cálculo, isenções, cobranças, arrecadação e fiscalização do IPTU.</div>
@@ -314,16 +324,120 @@
                 <a class="fake-link" href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2011/242/2416/lei-ordinaria-n-2416-2011-concede-isencao-do-imposto-sobre-a-transmissao-de-bens-imoveis-e-de-direitos-a-eles-relativos-realizada-inter-vivos-por-ato-oneroso-itbi-para-a-aquisicao-de-imoveis-oriundos-de-empreendimentos-habitacionais-populares-de-interesse-social-e-de-arrendamento-residencial-vinculados-a-politica-habitacional-municipal-estadual-e-federal?q=2416%2F2011" target="_blank" rel="noopener">Lei nº. 2416/2011 - </a>
                 <div class="document-description">Isenção para empreendimentos populares </div>
             </div>
-
-            <div class="document-entry">
-                <a class="fake-link" href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/lei-ordinaria/2019/298/2971/lei-ordinaria-n-2971-2019-dispoe-sobre-a-isencao-de-imposto-sobre-a-transmissao-inter-vivos-de-bens-imoveis-itbi-para-os-imoveis-que-menciona-integrantes-do-programa-minha-casa-minha-vida?q=2971%2F2019" target="_blank" rel="noopener">Lei nº. 2971/2019 - </a>
-                <div class="document-description">Isenção Minha Casa Minha Vida</div>
+          </div>
+          
+          </div>
+          
+          <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Taxas</div>
+            <div class="accordion-content">
+              <div class="document-entry">
+                <a class="fake-link" href="pdfs/7185 - DISCIPLINA A UTILIZAÇÃO DO LIVRO FISCAL ELETRONICO (REMAS) Dedução de obras.pdf" target="_blank" rel="noopener">Taxa de Lixo - </a>
+                <div class="document-description">A Taxa de Lixo é cobrada para a coleta e destinação de resíduos.</div>
+              </div>
+              <div class="document-entry">
+                <a class="fake-link" href="pdfs/2918 - Domicilio Tributario eletronico.pdf" target="_blank" rel="noopener">Taxa de Iluminação Pública - </a>
+                <div class="document-description">Regulamenta a Taxa de Iluminação Pública.</div>
+              </div>
             </div>
           </div>
-          
+          <hr class="section-divider">
+
+          <div class="text-content-after-cards">
+              <h4 style="margin-bottom: 10px;">Entendendo a Legislação Municipal</h4>
+              <p>A legislação municipal de Duque de Caxias é um conjunto de leis, decretos, portarias e outras normas que regem o funcionamento da cidade e a vida dos seus cidadãos. Compreender essas leis é fundamental para garantir o cumprimento das obrigações e o acesso aos direitos.</p>
+              <br>
+              <h4 style="margin-bottom: 10px;">Importância da Legislação</h4>
+              <p>A legislação é a base para a organização social, econômica e administrativa do município. Ela define as regras para impostos, urbanismo, saúde, educação, meio ambiente, entre outras áreas. Manter-se informado sobre as leis vigentes é essencial para empresas, cidadãos e profissionais de todas as áreas.</p>
+              <br>
+              <h4 style="margin-bottom: 10px;">Onde Acessar e Como Consultar</h4>
+              <p>Você pode acessar a legislação municipal através de diversos canais oficiais, incluindo o Diário Oficial do Município, portais de transparência e os links disponibilizados nesta página. É recomendável consultar sempre as fontes oficiais para ter certeza de que as informações estão atualizadas e corretas.</p>
           </div>
-          
-          <script>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONTEÚDOS</h3>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/ata-registro-preco.php">Ata Registro de Preço</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/autarquias.php">Autarquias</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/index.php/transparencia?id=62">Cadastro de Fornecedores</a>
+                <a href="https://saude.duquedecaxias.rj.gov.br/regulacao-saude.php">Central de Regulação Saúde</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/fundos-municipais.php?conteudo=6339">Conselho Municipal de Saúde</a>
+                <a href="https://portaldatransparencia.gov.br/localidades/3301702-duque-de-caxias">Conv. Governo Federal</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/dados_abertos.php">Dados Abertos</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/despesas.php">Despesas</a>
+                <a href="#">Despesas com recursos da CEDAE</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/divida-ativa.php">Dívida Ativa</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/escolas-municipais.php">Escolas Municipais</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/estatisticas-de-acesso.php">Estatísticas de Acesso</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/fundos-municipais.php">Fundos Municipais</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/gastos-diarias.php">Gastos com Diárias</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/normativos.php">Leis de Acesso a Informação</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/lgpd.php">LGPD</a>
+            </div>
+            <div class="footer-section">
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/licitacoes.php">Licitações</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/obras-publicas.php">Obras Públicas</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/orcamento.php">Orçamento</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php">Ouvidoria</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/patrimonios.php">Patrimônios</a>
+                <a href="https://drive.google.com/drive/folders/1hCABUqbobnUe7A9bq3EW3NbbeYYi5KiN?usp=sharing">PDDE</a>
+                <a href="https://leismunicipais.com.br/prefeitura/rj/duquedecaxias">Pesquisas de Leis</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/prestacao-de-contas.php">Prestação de Contas</a>
+                <a href="https://radardatransparencia.atricon.org.br/radar-da-transparencia-publica.html">Radar da Transparência</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/receitas.php">Receitas</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/recursos-financeiros.php">Recursos Financeiros</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/relatorios-lrf.php">Relatórios-LRF</a>
+                <a href="https://fpg.duquedecaxias.rj.gov.br/fpg5/openform.do?sys=FPG&action=openform&formID=8808">Rem. dos Servidores</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/siafic.php">SIAFIC - DECRETO FEDERAL 10.540/20</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/termos-contratos.php">Termos e Contratos</a>
+                <a href="https://transparencia.duquedecaxias.rj.gov.br/unidades-saude.php">Unidades de Saúde</a>
+            </div>
+            <div class="footer-section">
+                <h3>OUTROS PORTAIS</h3>
+                <a href="https://duquedecaxias.rj.gov.br/">Prefeitura Municipal de Duque de Caxias</a>
+                <a href="http://www.portaltransparencia.gov.br/">Governo Federal</a>
+                <a href="http://www.senado.gov.br/transparencia/">Senado</a>
+                <a href="http://www2.camara.leg.br/transparencia/a-transparencia-na-camara">Câmara Federal</a>
+                <a href="http://www.rj.gov.br/web/informacaopublica/">Governo Estadual</a>
+                <a href="http://www.cmdc.rj.gov.br/?page_id=7592">Leis Municipais</a>
+            </div>
+            <div class="footer-section">
+                <h3>FALE CONOSCO</h3>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>plantaofiscal.sefazplan@duquedecaxias.rj.gov.br</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt" style="font-size: 16px !important; width: 16px; height: 16px;"></i>
+
+                        <p>Praça Roberto da Silveira, 31 - Térreo<br>Jardim 25 de Agosto, Duque de Caxias/RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                  <p>Segunda - Sexta, 9h - 17h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="institutional-footer">
+            <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
+            <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
+        </div>
+
+        <div class="development-credits">
+            <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia.</p>
+        </div>
+    </footer>
+
+    <script src="script/pesquisa.js"></script>
+    <script src="script/scriptdealtocontraste.js"></script>
+    <script>
   function toggleAccordion(header) {
   const content = header.nextElementSibling;
   const isOpen = content.classList.contains("open");
@@ -380,99 +494,6 @@
 
 
 </script>
-
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>CONTEÚDOS</h3>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/ata-registro-preco.php">Ata Registro de Preço</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/autarquias.php">Autarquias</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/index.php/transparencia?id=62">Cadastro de Fornecedores</a>
-                <a href="https://saude.duquedecaxias.rj.gov.br/regulacao-saude.php">Central de Regulação Saúde</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/fundos-municipais.php?conteudo=6339">Conselho Municipal de Saúde</a>
-                <a href="https://portaldatransparencia.gov.br/localidades/3301702-duque-de-caxias">Conv. Governo Federal</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/dados_abertos.php">Dados Abertos</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/despesas.php">Despesas</a>
-                <a href="#">Despesas com recursos da CEDAE</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/divida-ativa.php">Dívida Ativa</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/escolas-municipais.php">Escolas Municipais</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/estatisticas-de-acesso.php">Estatísticas de Acesso</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/fundos-municipais.php">Fundos Municipais</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/gastos-diarias.php">Gastos com Diárias</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/normativos.php">Leis de Acesso a Informação</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/lgpd.php">LGPD</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/licitacoes.php">Licitações</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/obras-publicas.php">Obras Públicas</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/orcamento.php">Orçamento</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php">Ouvidoria</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/patrimonios.php">Patrimônios</a>
-                <a href="https://drive.google.com/drive/folders/1hCABUqbobnUe7A9bq3EW3NbbeYYi5KiN?usp=sharing">PDDE</a>
-                <a href="https://leismunicipais.com.br/prefeitura/rj/duquedecaxias">Pesquisas de Leis</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/prestacao-de-contas.php">Prestação de Contas</a>
-                <a href="https://radardatransparencia.atricon.org.br/radar-da-transparencia-publica.html">Radar da Transparência</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/receitas.php">Receitas</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/recursos-financeiros.php">Recursos Financeiros</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/relatorios-lrf.php">Relatórios-LRF</a>
-                <a href="https://fpg.duquedecaxias.rj.gov.br/fpg5/openform.do?sys=FPG&action=openform&formID=8808">Rem. dos Servidores</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/siafic.php">SIAFIC - DECRETO FEDERAL 10.540/20</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/termos-contratos.php">Termos e Contratos</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/unidades-saude.php">Unidades de Saúde</a>
-            </div>
-            <div class="footer-section">
-                <h3>OUTROS PORTAIS</h3>
-                <a href="http://www.portaltransparencia.gov.br/">Governo Federal</a>
-                <a href="http://www.senado.gov.br/transparencia/">Senado</a>
-                <a href="http://www2.camara.leg.br/transparencia/a-transparencia-na-camara">Câmara Federal</a>
-                <a href="http://www.rj.gov.br/web/informacaopublica/">Governo Estadual</a>
-                <a href="http://www.cmdc.rj.gov.br/?page_id=7592">Leis Municipais</a>
-            </div>
-            <div class="footer-section">
-                <h3>FALE CONOSCO</h3>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone" style= "margin-right: -3px;"></i>
-                        <p>21 2773-6213</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-envelope" style="position: relative; left: -0.08rem; margin-right: -3px;"></i>
-                        <p>ouvidoria@duquedecaxias.rj.gov.br</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Alameda Esmeralda 206<br>
-                        Jardim Primavera, Duque de Caxias/RJ</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Praça Roberto da Silveira, 31 - 2º andar<br>
-                        Centro, Duque de Caxias/RJ</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-clock" style="position: relative; left: -0.10rem; margin-right: -3px;"></i>
-                        <p>Segunda - Sexta, 9h - 17h</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="institutional-footer">
-            <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
-            <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
-        </div>
-
-        <div class="development-credits">
-            <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia.</p>
-        </div>
-    </footer>
-
-    <script src="pesquisa.js"></script>
-    <script src="scriptdealtocontraste.js"></script>
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>

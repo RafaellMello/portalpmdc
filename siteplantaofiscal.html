@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <!-- Desenvolvido por -->
+         <!-- Rafael Mello (github/RafaelLMello) -->
+          <!-- e Enzo Suzula (github/suzulaenzo) -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,72 +56,76 @@
                 height: 800px;
                 background: #fdfdfd;
             }
+
+            @media (max-width: 600px) {
+                .text-content-after-cards {
+                    padding: 10px;
+                    font-size: 15px;
+                    word-break: break-word;
+                    box-sizing: border-box;
+                    width: 100%;
+                    max-width: 100vw;
+                    overflow-x: hidden;
+                }
+                .text-content-after-cards h4,
+                .text-content-after-cards p,
+                .text-content-after-cards ul,
+                .text-content-after-cards li {
+                    word-break: break-word;
+                    overflow-wrap: break-word;
+                    font-size: 15px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    max-width: 100vw;
+                }
+                body.siteplantaofiscal {
+                    margin: 0;
+                    padding: 0;
+                    width: 100vw;
+                    overflow-x: hidden;
+                }
+                .content-container {
+                    width: 100vw !important;
+                    max-width: 100vw !important;
+                    margin: 0 !important;
+                    padding: 10px 0 10px 0 !important;
+                    box-sizing: border-box !important;
+                    overflow-x: hidden !important;
+                }
+                .content-container h2,
+                .content-container p,
+                .content-container a,
+                .content-container .section-item,
+                .content-container .section-item h4 {
+                    word-break: break-word;
+                    overflow-wrap: break-word;
+                    font-size: 15px;
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                    max-width: 100vw !important;
+                }
+            }
         </style>
         
-        <link rel="icon" type="image/png" href="logofavicon.png">
+        <link rel="icon" type="image/png" href="img/logofavicon.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
 <body class="siteplantaofiscal">
-    <div class="top-bar">
-        <div class="top-bar">
-            <div class="top-bar-content">
-                <a href="tel:+552127732600" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    (21) 2773-6200
-                </a>
-                <a href="https://duquedecaxias.rj.gov.br/" class="top-bar-item">
-                    <i class="fas fa-desktop"></i>
-                    Portal da Prefeitura
-                </a>
-                <a href="https://saude.duquedecaxias.rj.gov.br/" class="top-bar-item">
-                    <i class="fas fa-hospital"></i>
-                    Portal da Saúde
-                </a>
-                <a href="https://www.cmdc.rj.gov.br/" class="top-bar-item">
-                    <i class="fas fa-landmark"></i>
-                    Câmara Municipal
-                </a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php" class="top-bar-item">
-                    <i class="fas fa-headset"></i>
-                    Ouvidoria
-                </a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/" class="top-bar-item">
-                    <i class="fas fa-history"></i>
-                    Versão anterior
-                </a>
-                <a href="#" class="top-bar-item">
-                    <i class="fas fa-sitemap"></i>
-                    Mapa do site
-                </a>
-                <a href="https://duquedecaxias.rj.gov.br/pagina/servicos/identidade-visual" class="top-bar-item">
-                    <i class="fas fa-palette"></i>
-                    Identidade Visual
-                </a>
-                <button onclick="toggleContrast()" class="top-bar-item contrast-button">
-                    <i class="fas fa-adjust"></i>
-                    Alto contraste
-                </button>
-            </div>
-        </div>
-    </div>
 
     <nav class="main-menu">
-        <img src="logo.png" alt="Logo Duque de Caxias" class="logo">
+        <img src="img/logo.png" alt="Logo Duque de Caxias" class="logo">
         <div class="menu-links">
             <a href="sitee.html">Página Inicial</a>
-            <a href="sitelegislacao.html">Legislação</a>
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF">Formulários</a> 
+            <a href="siteformularios.html">Formulários</a> 
             <a href="https://transparencia.duquedecaxias.rj.gov.br/perguntas-frequentes.php?conteudo=75">Perguntas Frequentes</a>
-            <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
+            <a href="siteplantaofiscal.html">Fale conosco</a>
         </div>
     </nav>
 
     <div class="page-title">
         <h1>Plantão Fiscal</h1>
         <p class="description">
-            <br>Telefone: 2672-8807 
-            <br>E-mail: plantaofiscal.sefazplan@duquedecaxias.rj.gov.br
         </p>
     </div>
 
@@ -130,41 +137,95 @@
             </button>
         </form>
     </div>
-    
-    <div class="grid-container" id="optionsGrid" style="min-height: 380px !important; background: #fdfdfd; margin-left: 252px; border-radius: 6px;">
-        <div class="option-card" data-search="chat atendimento online duvidas">
-            <a href="https://chat.issnetonline.com.br/livechat?mode=popout" class="process-link" target="_blank">
-                <i class="fas fa-comments"></i>
-                <h2>Chat </h2>
-            </a>
+
+    <div class="content-container" style="margin-left: 252px; padding: 20px;">
+        <div class="main-section">
+            <h2 style="color: #000000; margin-bottom: 20px; font-weight: bold;">PRINCIPAL:</h2>
+            <p>Atendimento presencial, de segunda-feira à sexta-feira das 8h às 17h, sem agendamento prévio.</p>
+            <p>Atendimento por chat, de segunda-feira à sexta-feira das 8h às 17h (<a href="#">link</a>)</p>
+            <p>Atendimento via e-mail: <a href="mailto:plantaofiscal.sefazplan@duquedecaxias.rj.gov.br">plantaofiscal.sefazplan@duquedecaxias.rj.gov.br</a></p>
+            <p>Telefone: 2672-8807</p>
+            <p>Endereço: Praça Roberto da Silveira 31, 3º andar - Jardim 25 de Agosto - Duque de Caxias/RJ, sala 22.</p>
         </div>
 
-        <div class="option-card" data-search="leis legislacao">
-            <a href="sitelegislacao.html" class="process-link" target="_blank">
-                <i class="fas fa-hammer"></i>
-                <h2>Legislação</h2>
-            </a>
+        <div class="other-sections" style="margin-top: 30px;">
+            <h2 style="color: #000000; margin-bottom: 20px; font-weight: bold;">OUTROS SETORES:</h2>
         </div>
+            
+            <div class="section-item">
+                <h4 style="color: #000000;">NOTA FISCAL ELETRÔNICA</h4> 
+                <p>Telefone: 2672-8875 / 2672-8827</p>
+                <p>E-mail: <a href="mailto:notafiscal.sefazplan@duquedecaxias.rj.gov.br">notafiscal.sefazplan@duquedecaxias.rj.gov.br</a></p>
+            </div>
 
-    </div>
-    <div class="side-menu side-menu-plantao">
-        <div class="menu-header">
-            <h2>MENU</h2>
+            <div class="section-item">
+                <h4 style="color: #000000;">DÍVIDA ATIVA E PARCELAMENTOS</h4>
+                <p>Telefone: 2672-8856</p>
+                <p>E-mail: <a href="mailto:dividaativa.sefazplan@duquedecaxias.rj.gov.br">dividaativa.sefazplan@duquedecaxias.rj.gov.br</a></p>
+            </div>
+
+            <div class="section-item">
+                <h4 style="color: #000000;">CADASTRO DE IMÓVEIS</h4>
+                <p>Telefone: 2672-8857</p>
+                <p>E-mail: <a href="mailto:cadastro.sefazplan@duquedecaxias.rj.gov.br">cadastro.sefazplan@duquedecaxias.rj.gov.br</a></p>
+            </div>
+
+            <div class="section-item">
+                <h4 style="color: #000000;">CERTIDÃO</h4>
+                <p>Telefone: 2672-8876</p>
+                <p>E-mail: <a href="mailto:certidao.sefazplan@duquedecaxias.rj.gov.br">certidao.sefazplan@duquedecaxias.rj.gov.br</a></p>
+            </div>
+
+            <div class="section-item">
+                <h4 style="color: #000000;">SIMPLES e MEI</h4>
+                <p>Telefone: 2672-8883</p>
+                <p>E-mail: <a href="mailto:simples.sefazplan@duquedecaxias.rj.gov.br">simples.sefazplan@duquedecaxias.rj.gov.br</a></p>
+            </div>
+
+            <div class="section-item">
+                <h4 style="color: #000000;">ITBI E TAXAS</h4>
+                <p>Telefone: 2672-8858</p>
+                <p>E-mail: <a href="mailto:cita.sefazplan@duquedecaxias.rj.gov.br">cita.sefazplan@duquedecaxias.rj.gov.br</a></p>
+            </div>
         </div>
-        <div class="menu-items">
-            <a href="sitee.html"><i class="fas fa-home"></i> Página Inicial</a>
-            <a href="siteiss.html"><i class="fas fa-file-contract"></i> ISS</a>
-            <a href="siteiptu.html"><i class="fas fa-money-bill"></i> IPTU</a>
-            <a href="siteitbi.html"><i class="fas fa-dollar-sign"></i> ITBI</a>
-            <a href="sitenfse.html"><i class="fas fa-building"></i> NFS-e</a>
-            <a href="sitealvara.html"><i class="fas fa-chart-bar"></i> Alvará</a>
-            <a href="consultapublica.duquedecaxias.rj.gov.br:8004/consultapublica/index.php?class=ProcProcessoForm"><i class="fas fa-file-alt"></i> Consulta de Processos</a>
-            <a href="sitecertidoes.html"><i class="fas fa-clipboard-list"></i> Certidões</a>
-            <a href="siteplantaofiscal.html"><i class="fas fa-university"></i> Plantão Fiscal</a>
-            <a href="sitelegislacao.html"><i class="fas fa-hammer"></i> Legislação</a>
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF"><i class="fas fa-paperclip"></i> Formulários</a>
-        </div>
     </div>
+
+    <hr class="section-divider">
+
+    <div class="text-content-after-cards">
+        <h4>O que é o Plantão Fiscal?</h4>
+        <p>O Plantão Fiscal é um canal de atendimento disponibilizado pela Secretaria de Fazenda para auxiliar contribuintes, empresas e cidadãos com dúvidas e orientações sobre questões tributárias. É um serviço essencial para esclarecer procedimentos, legislação e demais informações relacionadas aos impostos municipais.</p>
+        <br>
+        <h4>Serviços Oferecidos</h4>
+        <p>No Plantão Fiscal, você pode obter suporte para emissão de guias, regularização de débitos, dúvidas sobre cadastro, processos fiscais e muito mais. O objetivo é facilitar o acesso à informação e garantir que todos os contribuintes estejam em conformidade com as normas fiscais.</p>
+        <br>
+        <h4>Canais de Atendimento</h4>
+        <p>O Plantão Fiscal oferece atendimento presencial, por telefone e por e-mail, buscando oferecer comodidade e agilidade. Verifique os horários de funcionamento e os contatos específicos para o seu tipo de consulta, conforme as informações disponibilizadas nesta página. A equipe está pronta para ajudar você a resolver suas questões fiscais de forma eficiente.</p>
+    </div>
+
+    <style>
+        .content-container {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .section-item {
+            margin-bottom: 25px;
+        }
+        .section-item h3 {
+            margin-bottom: 10px;
+        }
+        .section-item p {
+            margin: 5px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
     <!-- Rodapé -->
     <footer>
         <div class="footer-content">
@@ -186,6 +247,8 @@
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/gastos-diarias.php">Gastos com Diárias</a>
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/normativos.php">Leis de Acesso a Informação</a>
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/lgpd.php">LGPD</a>
+            </div>
+            <div class="footer-section">
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/licitacoes.php">Licitações</a>
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/obras-publicas.php">Obras Públicas</a>
                 <a href="https://transparencia.duquedecaxias.rj.gov.br/orcamento.php">Orçamento</a>
@@ -205,40 +268,30 @@
             </div>
             <div class="footer-section">
                 <h3>OUTROS PORTAIS</h3>
+                <a href="https://duquedecaxias.rj.gov.br/">Prefeitura Municipal de Duque de Caxias</a>
                 <a href="http://www.portaltransparencia.gov.br/">Governo Federal</a>
                 <a href="http://www.senado.gov.br/transparencia/">Senado</a>
                 <a href="http://www2.camara.leg.br/transparencia/a-transparencia-na-camara">Câmara Federal</a>
                 <a href="http://www.rj.gov.br/web/informacaopublica/">Governo Estadual</a>
                 <a href="http://www.cmdc.rj.gov.br/?page_id=7592">Leis Municipais</a>
             </div>
-            <div class="footer-section">
+           <div class="footer-section">
                 <h3>FALE CONOSCO</h3>
-                <div class="contact-info">
+
                     <div class="contact-item">
-                        <i class="fas fa-phone" style= "margin-right: -3px;"></i>
-                        <p>21 2773-6213</p>
+                        <i class="fas fa-envelope"></i>
+                        <p>plantaofiscal.sefazplan@duquedecaxias.rj.gov.br</p>
                     </div>
 
                     <div class="contact-item">
-                        <i class="fas fa-envelope" style="position: relative; left: -0.08rem; margin-right: -3px;"></i>
-                        <p>ouvidoria@duquedecaxias.rj.gov.br</p>
+                        <i class="fas fa-map-marker-alt" style="font-size: 16px !important; width: 16px; height: 16px;"></i>
+
+                        <p>Praça Roberto da Silveira, 31 - Térreo<br>Jardim 25 de Agosto, Duque de Caxias/RJ</p>
                     </div>
 
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Alameda Esmeralda 206<br>
-                        Jardim Primavera, Duque de Caxias/RJ</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Praça Roberto da Silveira, 31 - 2º andar<br>
-                        Centro, Duque de Caxias/RJ</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-clock" style="position: relative; left: -0.10rem; margin-right: -3px;"></i>
-                        <p>Segunda - Sexta, 9h - 17h</p>
+                        <i class="fas fa-clock"></i>
+                  <p>Segunda - Sexta, 9h - 17h</p>
                     </div>
                 </div>
             </div>
