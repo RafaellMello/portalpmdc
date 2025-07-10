@@ -124,6 +124,18 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+  .option-card i {
+  font-size: 30px;         /* Define o tamanho visual da fonte */
+  width: 30px;             /* Garante largura fixa */
+  height: 30px;            /* Garante altura fixa */
+  line-height: 30px;       /* Centraliza verticalmente se necessário */
+  display: flex;           /* Torna o ícone um box flexível */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px !important;
+  color: white;
+}
+
 }
 
         .option-card:hover {
@@ -865,5 +877,15 @@ a, .text-content-after-cards a, .text-dos-botoes a, .iss-text-container a, .text
 .content-container:hover {
     box-shadow: 0 0px 12px rgba(0, 0, 0, 0.6);
 }
+
+@media (max-width: 768px) {
+  .verificar-nfse i {
+    margin-top: 15px;
+  }
+  .verificar-nfse h2 {
+    margin-top: 5px !important;
+  }
+}
+
 
 
