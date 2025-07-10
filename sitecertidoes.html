@@ -238,7 +238,7 @@ ul li {
     
 
     <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">Certidão Online</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>Certidão Online</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="https://www.tributosnet.com.br/duquedecaxias/portal/Modulos/ListaContribuinteAlvara.aspx?tipo=certidao&m=2975" target="_blank" rel="noopener" style="text-decoration: underline;">Certidão de Débitos Fiscais</a>
@@ -388,6 +388,11 @@ ul li {
   function toggleAccordion(header) {
   const content = header.nextElementSibling;
   const isOpen = content.classList.contains("open");
+
+  if (icon) {
+    icon.classList.toggle("fa-chevron-down", isOpen); // Se está aberto → seta para baixo (fechar)
+    icon.classList.toggle("fa-chevron-up", !isOpen);  // Se está fechado → seta para cima (abrir)
+  }
 
   // Fecha todos os outros instantaneamente
   document.querySelectorAll(".accordion-content.open").forEach((otherContent) => {

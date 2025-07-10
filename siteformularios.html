@@ -199,7 +199,7 @@
     <body>
     
               <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">Alvará</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>Alvará</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="pdfs/DECRETO 6654.pdf" target="_blank" rel="noopener">
@@ -242,7 +242,7 @@
             
           </div>
               <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">ISS</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>ISS</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="pdfs/ISS/Form BAIXA DE DEBITO.pdf" target="_blank" rel="noopener">
@@ -272,7 +272,7 @@
             
           </div>
            <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">IPTU</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>IPTU</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="pdfs/IPTU/Boletim de Coleta de Dados Imobiliários.pdf" target="_blank" rel="noopener">Boletim de Coleta de Dados Imobiliários -</a>
@@ -298,7 +298,7 @@
           </div>
 
            <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">ITBI</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>ITBI</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="pdfs/ITBI/Form ALTERACAO ITBI.pdf" target="_blank" rel="noopener">
@@ -342,7 +342,7 @@
           </div> 
           
           <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">NFS-e</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>NFS-e</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="pdfs/NFS/Form BAIXA DE DEBITO.pdf" target="_blank" rel="noopener">Formulário Baixa de Débito - </a>
@@ -363,7 +363,7 @@
             </div>
           </div>
           <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">Certidões</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>Certidões</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="pdfs/Certidões/FORMULÁRIO CERTIDÃO NEGATIVA DE RETENÇÃO DE ISS (1).pdf" target="_blank" rel="noopener">
@@ -480,6 +480,12 @@
   function toggleAccordion(header) {
   const content = header.nextElementSibling;
   const isOpen = content.classList.contains("open");
+
+  const icon = header.querySelector("i");
+  if (icon) {
+    icon.classList.toggle("fa-chevron-down", isOpen); // Se está aberto → seta para baixo (fechar)
+    icon.classList.toggle("fa-chevron-up", !isOpen);  // Se está fechado → seta para cima (abrir)
+  }
 
   // Fecha todos os outros instantaneamente
   document.querySelectorAll(".accordion-content.open").forEach((otherContent) => {

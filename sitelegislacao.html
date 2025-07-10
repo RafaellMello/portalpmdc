@@ -199,7 +199,7 @@
     <body>
     
         <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">Leis gerais</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>Leis gerais</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="pdfs/DECRETO 6654.pdf" target="_blank" rel="noopener">Decreto 6654 - </a>
@@ -249,7 +249,7 @@
             </div>
           </div>
               <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">Alvará</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>Alvará</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="https://leismunicipais.com.br/a/rj/d/duque-de-caxias/decreto/2016/666/6654/decreto-n-6654-2016-regulamenta-a-concessao-alteracao-paralisacao-e-baixa-de-licenca-e-respectivos-alvaras-assim-compreendidos-o-provisorio-definitivo-transitorio-especial-e-inscricao-eventual-conforme-disposto-no-artigo-135-e-154-da-lei-municipal-1664-2002?q=6.654" target="_blank" rel="noopener">Decreto nº 6.654 -</a>
@@ -270,7 +270,7 @@
             
           </div>
               <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">ISS</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>ISS</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="https://leismunicipais.com.br/codigo-tributario-duque-de-caxias-rj" target="_blank" rel="noopener">CTM, Art. 44º ao 83º - </a>
@@ -286,7 +286,7 @@
             
           </div>
            <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">IPTU</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>IPTU</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="https://leismunicipais.com.br/codigo-tributario-duque-de-caxias-rj" target="_blank" rel="noopener">CTM, Art. 44º ao 83º - </a>
@@ -312,7 +312,7 @@
           </div>
 
            <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">ITBI</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>ITBI</div>
             <div class="accordion-content">
 
               <div class="document-entry">
@@ -329,7 +329,7 @@
           </div>
           
           <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion(this)">Taxas</div>
+            <div class="accordion-header" onclick="toggleAccordion(this)"><i class="fas fa-chevron-down" style="margin-right: 8px;"></i>Taxas</div>
             <div class="accordion-content">
               <div class="document-entry">
                 <a class="fake-link" href="pdfs/7185 - DISCIPLINA A UTILIZAÇÃO DO LIVRO FISCAL ELETRONICO (REMAS) Dedução de obras.pdf" target="_blank" rel="noopener">Taxa de Lixo - </a>
@@ -441,6 +441,11 @@
   function toggleAccordion(header) {
   const content = header.nextElementSibling;
   const isOpen = content.classList.contains("open");
+
+  if (icon) {
+    icon.classList.toggle("fa-chevron-down", isOpen); // Se está aberto → seta para baixo (fechar)
+    icon.classList.toggle("fa-chevron-up", !isOpen);  // Se está fechado → seta para cima (abrir)
+  }
 
   // Fecha todos os outros instantaneamente
   document.querySelectorAll(".accordion-content.open").forEach((otherContent) => {
