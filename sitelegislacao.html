@@ -439,66 +439,79 @@
     <script src="script/scriptdealtocontraste.js"></script>
     <script>
   function toggleAccordion(header) {
-  const content = header.nextElementSibling;
-  const isOpen = content.classList.contains("open");
+    const content = header.nextElementSibling;
+    const isOpen = content.classList.contains("open");
 
-  if (icon) {
-    icon.classList.toggle("fa-chevron-down", isOpen); // Se está aberto → seta para baixo (fechar)
-    icon.classList.toggle("fa-chevron-up", !isOpen);  // Se está fechado → seta para cima (abrir)
-  }
+    // Fecha todos os outros
+    document.querySelectorAll(".accordion-content.open").forEach((otherContent) => {
+      if (otherContent !== content) {
+        otherContent.classList.remove("open");
+        otherContent.style.transition = "none";
+        otherContent.style.height = "0px";
+        otherContent.style.display = "none";
+        void otherContent.offsetWidth;
+        otherContent.style.transition = "";
 
-  // Fecha todos os outros instantaneamente
-  document.querySelectorAll(".accordion-content.open").forEach((otherContent) => {
-    if (otherContent !== content) {
-      otherContent.classList.remove("open");
-      otherContent.style.transition = "none";         // remove transição
-      otherContent.style.height = "0px";
-      otherContent.style.display = "none";
+        // 👉 Troca ícone dos outros headers para seta para baixo
+        const otherHeader = otherContent.previousElementSibling;
+        const otherIcon = otherHeader?.querySelector("i");
+        if (otherIcon) {
+          otherIcon.classList.remove("fa-chevron-up");
+          otherIcon.classList.add("fa-chevron-down");
+        }
+      }
+    });
 
-      // força reativação da transição para próximos usos
-      void otherContent.offsetWidth;                  // força reflow
-      otherContent.style.transition = "";             // restaurar transição
-    }
-  });
+    const icon = header.querySelector("i");
 
-  // Alterna o accordion clicado
-  if (isOpen) {
-    // FECHAR com animação
-    const currentHeight = content.scrollHeight;
-    content.style.height = currentHeight + "px";
+    if (isOpen) {
+      // FECHAR
+      const currentHeight = content.scrollHeight;
+      content.style.height = currentHeight + "px";
 
-    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        content.style.height = "0px";
+      });
+
+      content.addEventListener("transitionend", function handleClose(e) {
+        if (e.propertyName === "height") {
+          content.classList.remove("open");
+          content.style.display = "none";
+          content.removeEventListener("transitionend", handleClose);
+        }
+      });
+
+      // ⬇️ seta para baixo
+      if (icon) {
+        icon.classList.remove("fa-chevron-up");
+        icon.classList.add("fa-chevron-down");
+      }
+    } else {
+      // ABRIR
+      content.style.display = "block";
       content.style.height = "0px";
-    });
+      content.offsetHeight;
 
-    content.addEventListener("transitionend", function handleClose(e) {
-      if (e.propertyName === "height") {
-        content.classList.remove("open");
-        content.style.display = "none";
-        content.removeEventListener("transitionend", handleClose);
+      const fullHeight = content.scrollHeight + "px";
+      content.style.height = fullHeight;
+      content.classList.add("open");
+
+      content.addEventListener("transitionend", function handleOpen(e) {
+        if (e.propertyName === "height") {
+          content.style.height = "auto";
+          content.removeEventListener("transitionend", handleOpen);
+        }
+      });
+
+      // ⬆️ seta para cima
+      if (icon) {
+        icon.classList.remove("fa-chevron-down");
+        icon.classList.add("fa-chevron-up");
       }
-    });
-  } else {
-    // ABRIR com animação
-    content.style.display = "block";
-    content.style.height = "0px";
-    content.offsetHeight; // força reflow
-
-    const fullHeight = content.scrollHeight + "px";
-    content.style.height = fullHeight;
-    content.classList.add("open");
-
-    content.addEventListener("transitionend", function handleOpen(e) {
-      if (e.propertyName === "height") {
-        content.style.height = "auto";
-        content.removeEventListener("transitionend", handleOpen);
-      }
-    });
+    }
   }
-}
-
-
 </script>
+
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
