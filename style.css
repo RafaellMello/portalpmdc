@@ -53,6 +53,7 @@
             color: white;
             text-align: center;
             padding: 30px;
+            height: 68px;
         }
 
         .page-title h1 {
@@ -886,6 +887,8 @@ a, .text-content-after-cards a, .text-dos-botoes a, .iss-text-container a, .text
     margin-top: 5px !important;
   }
 }
+
+
 
 
 
