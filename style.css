@@ -119,6 +119,13 @@
             font-weight: normal;
         }
 
+@media (max-width: 768px) {
+  .option-card h2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
         .option-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
