@@ -164,22 +164,25 @@
 
         .footer-content {
             display: flex;
-            justify-content: space-between;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 80px;
             flex-wrap: wrap;
             max-width: 1600px;
-            margin: 0 auto;
-            padding: 0 40px;
+            margin-left: 0;
+            margin-right: auto;
+            padding: 0 10px;
         }
 
         .footer-section {
-            flex: 1 1 22%;
+            flex: 1 1 350px;
+            min-width: 300px;
+            max-width: 400px;
             box-sizing: border-box;
         }
 
         .footer-section:nth-of-type(2) {
-            margin-top: 37px;
+            margin-left: -130px;
         }
 
         .footer-section h3 {
@@ -244,10 +247,22 @@
         .contact-item::before {
             content: ">";
             margin-right: 8px;
+            margin-top: -2px;
+            height: 20px;
+        }
+        
+        .contact-item:nth-of-type(2)::before {
+            margin-top: 3px;
         }
         
         .contact-item i {
             margin-right: 8px;
+            margin-top: 1px;
+        }
+
+        .contact-item i.fa-map-marker-alt {
+            margin-left: 2px;
+            margin-top: 6px;
         }
 
         .contact-item p {
