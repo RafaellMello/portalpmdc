@@ -164,13 +164,13 @@
 
         .footer-content {
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
             gap: 80px;
             flex-wrap: wrap;
             max-width: 1600px;
-            margin-left: 0;
-            margin-right: auto;
+            margin-left: 0px;
+            margin-right: 0;
             padding: 0 10px;
         }
 
