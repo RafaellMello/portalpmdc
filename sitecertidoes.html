@@ -20,116 +20,117 @@
         <meta name="twitter:title" content="PMDC - Portal do Contribuinte" />
         <meta name="twitter:description" content="Portal do Contribuinte: Sua plataforma para acompanhar tributos, consultas e serviços públicos de forma prática e segura." />
         <meta name="twitter:image" content="https://portalpmdc.vercel.app/img/secfazenda.png" />
-        <style>
+                  
+          <style>
+                      .accordion {
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            background: #fdfdfd;
+            width: 75%;
+            align-items: center;
+            justify-content: center;
+            margin: 5px auto;
+          }
+
+          .accordion-header {
+            background-color: #1c638b;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            border-bottom: 1px solid #ccc;
+            border-radius: 4px;
+          }
+
+          .accordion-header:hover {
+            background-color: #2980b9;
+          }
+
+          .accordion-content {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: none;
+          }
+
+          .accordion-content.open {
+            display: block;
+          }
+
+
+          .document-entry {
+            display: flex;
+            align-items: baseline;
+          }
+
+          .document-entry a {
+            font-weight: bold;
+            color: #2980b9;
+            text-decoration: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
+          }
+
+          .document-entry a:hover {
+            text-decoration: underline;
+          }
+
+          .document-description {
+            color: #000000;
+            font-size: 16px;
+            text-align: justify;
+            flex-grow: 1;
+          }
+
+          @media screen and (max-width: 768px) {
             .accordion {
-  border: none;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  background: #fdfdfd;
-  width: 75%;
-  align-items: center;
-  justify-content: center;
-  margin: 5px auto;
-}
+              margin-left: 20px;
+              margin-right: 20px;
+              width: auto;
+            }
 
-.accordion-header {
-  background-color: #1c638b;
-  cursor: pointer;
-  padding: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
-  border-bottom: 1px solid #ccc;
-  border-radius: 4px;
-}
+            .accordion-header {
+              text-align: left;
+              font-size: 20px;
+            }
 
-.accordion-header:hover {
-  background-color: #2980b9;
-}
+            .accordion-content {
+              text-align: left;
+              padding: 12px;
+            }
 
-.accordion-content {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: none;
-}
+            .document-entry {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 20px;
+            }
 
-.accordion-content.open {
-  display: block;
-}
+            .document-entry a {
+              font-size: 16px;
+              font-weight: bold;
+              color: #2980b9;
+              margin-bottom: 5px;
+              display: block;
+            }
 
+            .document-description {
+              font-size: 14px;
+              line-height: 1.4;
+              text-align: left;
+              margin-left: 0;
+            }
 
-.document-entry {
-  display: flex;
-  align-items: baseline;
-}
-
-.document-entry a {
-  font-weight: bold;
-  color: #2980b9;
-  text-decoration: none;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-.document-entry a:hover {
-  text-decoration: underline;
-}
-
-.document-description {
-  color: #000000;
-  font-size: 16px;
-  text-align: justify;
-  flex-grow: 1;
-}
-
-@media screen and (max-width: 768px) {
-  .accordion {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: auto;
-  }
-
-  .accordion-header {
-    text-align: left;
-    font-size: 20px;
-  }
-
-  .accordion-content {
-    text-align: left;
-    padding: 12px;
-  }
-
-  .document-entry {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  .document-entry a {
-    font-size: 16px;
-    font-weight: bold;
-    color: #2980b9;
-    margin-bottom: 5px;
-    display: block;
-  }
-
-  .document-description {
-    font-size: 14px;
-    line-height: 1.4;
-    text-align: left;
-    margin-left: 0;
-  }
-
-  .accordion:nth-of-type(2) {
-  margin-top: 40px;
-}
-}
+            .accordion:nth-of-type(2) {
+            margin-top: 40px;
+          }
+          }
             @font-face {
                 font-family: 'AaltoSansEssentialLight';
                 src: url('AaltoSansEssential.ttf') format('truetype');
@@ -176,11 +177,7 @@
             }
 
             .page-title h1 {
-                font-size: 45px;
-                font-family: 'AaltoSansEssentialLight', Arial, Helvetica, sans-serif !important;
-                font-weight: normal;
-                margin-bottom: 15px;
-                padding-top: 0px;
+                margin-bottom: 0px;
             }
 
             .description {
@@ -235,11 +232,9 @@ ul li {
         </div>
     </nav>
 
-    <div class="page-title">
-  <h1>Certidões</h1>
-  <br>
-  <div class="description-text"></div>
-</div>
+  <div class="page-title">
+    <h1>Certidões</h1>
+  </div>
 
     <div class="search-container">
         <form class="search-form" onsubmit="return false;">
