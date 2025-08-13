@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <!-- Desenvolvido por -->
+         <!-- Rafael Mello (github/RafaelLMello) -->
+          <!-- e Enzo Suzula (github/suzulaenzo) -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>PMDC - Alvará Transitório</title>
+        
+        <style>
+            @font-face {
+                font-family: 'AaltoSansEssentialLight';
+                src: url('AaltoSansEssential.ttf') format('truetype');
+                font-display: swap;
+            }
+
+            .option-card {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .option-card a.process-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: inherit;
+                z-index: 1;
+            }
+
+            .option-card i {
+                position: relative;
+                z-index: 2;
+            }
+
+            .option-card h2 {
+                position: relative;
+                z-index: 2;
+            }
+
+            .menu-header {
+                height: 0px !important; /* ou o tamanho que quiser */
+            }
+
+            .menu-header h2 {
+                margin-top: -20px; /* ou um valor negativo, tipo -5px para subir mais */
+            }
+
+            @media (max-width: 600px) {
+                .text-content-after-cards {
+                    padding: 10px;
+                    font-size: 15px;
+                    word-break: break-word;
+                    box-sizing: border-box;
+                    width: 100%;
+                    max-width: 100vw;
+                    overflow-x: hidden;
+                }
+                .text-content-after-cards h4,
+                .text-content-after-cards p,
+                .text-content-after-cards ul,
+                .text-content-after-cards li {
+                    word-break: break-word;
+                    overflow-wrap: break-word;
+                    font-size: 15px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    max-width: 100vw;
+                }
+                body {
+                    margin: 0;
+                    padding: 0;
+                    width: 100vw;
+                    overflow-x: hidden;
+                }
+            }
+            a {
+                color: #2980b9;
+                text-decoration: none; /* Remover sublinhado */
+            }
+        </style>
+        
+          <!-- Open Graph (Facebook, LinkedIn etc) -->
+        <meta property="og:title" content="PMDC - Portal do Contribuinte" />
+        <meta property="og:description" content="Portal do Contribuinte: Sua plataforma para acompanhar tributos, consultas e serviços públicos de forma prática e segura." />
+        <meta property="og:image" content="https://portalpmdc.vercel.app/img/secfazenda.png" />
+        <meta property="og:url" content="https://portalpmdc.vercel.app/" />
+        <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PMDC - Portal do Contribuinte" />
+        <meta name="twitter:description" content="Portal do Contribuinte: Sua plataforma para acompanhar tributos, consultas e serviços públicos de forma prática e segura." />
+        <meta name="twitter:image" content="https://portalpmdc.vercel.app/img/secfazenda.png" />
+        
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+<body>
+
+    <nav class="main-menu">
+        <img src="img/logonova.png" alt="Logo Duque de Caxias" class="logo">
+
+        <div class="menu-links">
+            <a href="index.html">Página Inicial</a>
+            <a href="sitelegislacao.html">Legislação</a>
+            <a href="siteformularios.html">Formulários</a> 
+            <a href="siteplantaofiscal.html">Perguntas Frequentes</a>
+            <a href="siteplantaofiscal.html">Fale conosco</a>
+        </div>
+    </nav>
+
+    <div class="page-title">
+        <h1>Alvará - Transitório</h1>
+
+    </div>
+
+    <div class="search-container">
+        <form class="search-form" onsubmit="return false;">
+            <input type="text" class="search-input" id="searchInput" placeholder="O que você procura?" oninput="filterOptions()">
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+
+
+      <div class="text-content-after-cards">
+
+        <h2>Passo a Passo para Obter o Alvará Transitório:</h2>
+
+    <br>
+        <h3 style="font-weight: normal;">O pedido deverá ser instruído com os seguintes documentos:</h3>
+
+        <ul>
+            <li><b>I</b> - Requerimento de Inscrição no Cadastro Municipal de Contribuintes (anexo da portaria n 13/2020);</li>
+            <li><b>II</b> - Cópia do contrato social ou de registro de empresa individual ou estatutos e ata da 1ª assembleia;</li>
+            <li><b>III</b> - CNPJ - comprovante de inscrição no fisco federal;</li>
+            <li><b>IV</b> - DOCAD - comprovante de inscrição no fisco Estadual, se for o caso;</li>
+            <li><b>V</b> - Cópia do contrato de prestação de serviços e seus anexos, caso haja;</li>
+            <li><b>VI</b> - IPTU - cópia do "espelho" do carne do ano em exercício (Notificação de Lançamento), em caso de
+            <li>utilização de imóvel particular;</li>
+            <li><b>VII</b> - prova do direito de uso do local (título de propriedade, contrato de locação ou comodato, dentre
+            outros pertinentes) com reconhecimento de firma e, a no caso de posse, o ocupante poderá apresentar
+            escritura declaratória de posse, ou declaração de posse devidamente registrada no cartório competente. (Títulos e Documentos).</li>
+            <li><b>VIII</b> - Documento registrado em cartório competente que comprove a anuência dos demais herdeiros em
+            relação ao aluguel do imóvel, se for o caso.</li>
+            <li><b>IX</b> - Certificado de Inspeção Sanitária Municipal no caso de comércio ou promoção de gêneros
+            alimentícios e produtos farmacológicos;</li>
+            <li><b>X</b> - Certificado do Corpo de Bombeiros, com especificação de lotação máxima permitida e demais
+            condições de segurança quando for o caso.</li>
+            <li><b>XI</b> - Cópia do registro de identidade comprovante de inscrição no CPF e do comprovante de residência
+            dos sócios ou representantes ou do requerente, se pessoa física;</li>
+            <li><b>XII</b> - Cópia autenticada da procuração com firma reconhecida, se for o caso, e cópia do registro de
+            identidade do procurador;</li>
+            <li><b>XIII</b> - Termo de responsabilidade civil da empresa responsável pela montagem de arquibancada,
+            palanque, palco, acesso, estruturas de madeira, metálicas e outros equipamentos similares, quando for o caso;</li>
+            <li><b>XIV</b> - Cópia do alvará de licença do estabelecimento dentro do qual se pretenda exercer atividade de
+            caráter temporário, quando for o caso;</li>
+            <li><b>XV</b> - Autorização do titular da empresa cedente do espaço cuja área se pretender o exercício da atividade
+            a que se propõe o empreendimento em caráter temporário.</li>
+            <li><b>XVI</b> - Cópia do ALVARÁ DE LICENÇA PARA LOCALIZAÇÃO DEFINITIVO do requerente da autorização
+            Transitória, quando estabelecido no Município.</li>
+        </ul>
+        <br>
+            <p>Importante observar que o contrato de prestação de serviço deve ser juntado integralmente, ou seja, com os anexos. Se
+            não tiver contrato formal, a contratação do serviço poderá ser provada com qualquer outro documento como, por
+            exemplo, um e-mail.</p>
+        <br>
+            <p>O certificado do corpo de bombeiros e o alvará definitivo mencionados acima citados são do estabelecimento tomador
+            (local onde a sua empresa ficará estabelecida).</p>
+        <br>
+            <p>Para dar entrada no alvará transitório, a empresa precisará pagar uma taxa de expediente no valor de R$ 53,20. Para
+            retirar tal taxa, basta entrar em contato com a Diretoria de Impostos e Taxas (diita.sefaz@gmail.com / 2672-8858).
+            Ao final do processo, para retirar o alvará, deverá ser paga a taxa de licenciamento no valor de R$ 1.064,00 (400 VR).
+            Com base neste alvará transitório, a empresa prestadora de serviço será cadastrada no município de Duque de Caxias
+            e deverá emitir nota fiscal caxiense quando do faturamento do serviço em questão.</p>
+        <br>    
+            <p>Destaca-se que, de acordo com o art. 10, do Decreto n° 6.654/2016 c/c art. 3º, §2º, da Portaria n° 13/2020, o alvará
+            transitório será concedido pelo mesmo prazo de vigência do contrato. Se este for silente, o alvará transitório será
+            concedido pelo prazo máximo de 1 ano, devendo o contribuinte renová-lo caso a prestação de serviço ultrapasse esse
+            período. Para tanto, o contribuinte deverá requerer a prorrogação do alvará nos mesmos autos que tramitou a
+            concessão da licença, mediante a apresentação dos seguintes documentos (arts. 8º ao 10º da Portaria 13/2020):</p>
+        <br>
+        <ul>
+            <li><b>I.</b> Petição requerendo a prorrogação e informando os motivos;</li>
+            <li><b>II.</b> Documento que comprove a prorrogação do contrato de prestação de serviço ou de utilização da área onde está
+            instalado o estabelecimento temporário;</li>
+            <li><b>III.</b> Alvará Original;</li>
+            <li><b>IV.</b> Taxa de expediente paga</li>
+        </ul>
+        <br>
+            <h3 style="font-weight: normal;">Para facilitar, segue a legislação que trata do assunto.</h3>
+        <br>
+            <p><a href="pdfs/Alvará/Passo a Passo Alvará Transitório.pdf">Clique aqui</a> para acessar o formulário de requerimento.</p>
+
+    </div>
+</div>
+
+    
+<!-- Rodapé -->
+<footer>
+     <div class="footer-content">
+         <div class="footer-section">
+            <h3>OUTROS PORTAIS</h3>
+            <a href="https://duquedecaxias.rj.gov.br/">Prefeitura Municipal de Duque de Caxias</a>
+            <a href="http://www.gov.br/pt-br">Governo Federal</a>
+            <a href="https://www12.senado.leg.br/hpsenado">Senado Federal</a>
+            <a href="https://www.camara.leg.br/">Câmara dos Deputados</a>               
+            <a href="https://www.rj.gov.br/">Governo Estadual</a>
+            <a href="http://www.cmdc.rj.gov.br/?page_id=7592">Leis Municipais</a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/">Portal Transparência</a>
+        </div>
+        <div class="footer-section">
+             <h3>FALE CONOSCO</h3>
+             <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                 <p>plantaofiscal.sefazplan@duquedecaxias.rj.gov.br</p>
+              </div>
+               <div class="contact-item">
+                   <i class="fas fa-map-marker-alt" style="font-size: 16px !important; width: 16px; height: 16px;"></i>
+                   <p>Praça Roberto da Silveira, 31 - Térreo<br>Jardim 25 de Agosto, Duque de Caxias/RJ</p>
+             </div>
+             <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                 <p>Segunda à Sexta, 9h - 17h</p>
+              </div>
+           </div>
+      </div>
+      <div class="institutional-footer">
+           <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
+           <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
+       </div>
+       <div class="development-credits">
+        <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia.</p>
+       </div>
+ </footer>
+
+    <script>
+        function filterOptions() {
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll('.option-card');
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-search').toLowerCase();
+                if (searchData.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

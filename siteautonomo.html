@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <!-- Desenvolvido por -->
+         <!-- Rafael Mello (github/RafaelLMello) -->
+          <!-- e Enzo Suzula (github/suzulaenzo) -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>PMDC - Alvará Autônomo</title>
+        
+        <style>
+            @font-face {
+                font-family: 'AaltoSansEssentialLight';
+                src: url('AaltoSansEssential.ttf') format('truetype');
+                font-display: swap;
+            }
+
+            .option-card {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .option-card a.process-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: inherit;
+                z-index: 1;
+            }
+
+            .option-card i {
+                position: relative;
+                z-index: 2;
+            }
+
+            .option-card h2 {
+                position: relative;
+                z-index: 2;
+            }
+
+            .menu-header {
+                height: 0px !important; /* ou o tamanho que quiser */
+            }
+
+            .menu-header h2 {
+                margin-top: -20px; /* ou um valor negativo, tipo -5px para subir mais */
+            }
+
+            @media (max-width: 600px) {
+                .text-content-after-cards {
+                    padding: 10px;
+                    font-size: 15px;
+                    word-break: break-word;
+                    box-sizing: border-box;
+                    width: 100%;
+                    max-width: 100vw;
+                    overflow-x: hidden;
+                }
+                .text-content-after-cards h4,
+                .text-content-after-cards p,
+                .text-content-after-cards ul,
+                .text-content-after-cards li {
+                    word-break: break-word;
+                    overflow-wrap: break-word;
+                    font-size: 15px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    max-width: 100vw;
+                }
+                body {
+                    margin: 0;
+                    padding: 0;
+                    width: 100vw;
+                    overflow-x: hidden;
+                }
+            }
+            a {
+                color: #2980b9;
+                text-decoration: none; /* Remover sublinhado */
+            }
+        </style>
+        
+          <!-- Open Graph (Facebook, LinkedIn etc) -->
+        <meta property="og:title" content="PMDC - Portal do Contribuinte" />
+        <meta property="og:description" content="Portal do Contribuinte: Sua plataforma para acompanhar tributos, consultas e serviços públicos de forma prática e segura." />
+        <meta property="og:image" content="https://portalpmdc.vercel.app/img/secfazenda.png" />
+        <meta property="og:url" content="https://portalpmdc.vercel.app/" />
+        <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PMDC - Portal do Contribuinte" />
+        <meta name="twitter:description" content="Portal do Contribuinte: Sua plataforma para acompanhar tributos, consultas e serviços públicos de forma prática e segura." />
+        <meta name="twitter:image" content="https://portalpmdc.vercel.app/img/secfazenda.png" />
+        
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+<body>
+
+    <nav class="main-menu">
+        <img src="img/logonova.png" alt="Logo Duque de Caxias" class="logo">
+
+        <div class="menu-links">
+            <a href="index.html">Página Inicial</a>
+            <a href="sitelegislacao.html">Legislação</a>
+            <a href="siteformularios.html">Formulários</a> 
+            <a href="siteplantaofiscal.html">Perguntas Frequentes</a>
+            <a href="siteplantaofiscal.html">Fale conosco</a>
+        </div>
+    </nav>
+
+    <div class="page-title">
+        <h1>Alvará - Autônomo</h1>
+
+    </div>
+
+    <div class="search-container">
+        <form class="search-form" onsubmit="return false;">
+            <input type="text" class="search-input" id="searchInput" placeholder="O que você procura?" oninput="filterOptions()">
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+    
+
+      <div class="text-content-after-cards">
+
+        <h2>Passo a Passo para Obter o Alvará Online de Autônomos:</h2>
+    <br>
+        <p><a href="https://www.jucerja.rj.gov.br/regin.externo/ViabilidadeOpcaoV32.aspx">Entrar no link</a> para fazer pedido de viabilidade no REGIN. Em <b>“Município de Interesse”</b>, selecionar <b>“Duque de
+            Caxias”</b>. Em <b>“Instituição”</b>, selecionar <b>“Prefeitura Municipal – Eventos Exclusivos”</b>.
+            Em seguida <b>“Novo Requerimento”</b>, assinalar <b>“Profissional Autônomo”</b> e clicar em
+            <b>"Iniciar"</b>.</p>
+    <br>
+        <p>Na pergunta <b>“Autônomo possui Estabelecimento”</b>, assinalar <b>“Não”</b>. Selecione o
+            Evento <b>“Inscrição de Autônomo”</b> e preencha o CPF, clicando em seguida em <b>[Avançar]</b>.
+            Anote o número do Requerimento Eletrônico e preencha todos os dados requeridos. Em
+            seguida clique em <b>[Avançar]</b>.
+            Na tela seguinte, após o preenchimento dos dados faltantes, clique novamente em
+            <b>[Avançar]</b>. Anexe os documentos solicitados e, finalmente, finalize o pedido clicando em <b>[Enviar]</b>.</p>
+    <br>
+        <p>Finalizado o pedido de viabilidade, enviar e-mail para <b>alvaraonlinedc@gmail.com</b>,
+            informando o número do CPF e do Requerimento (Protocolo) realizado acima e solicitar o diploma
+            de alvará e/ou a Inscrição Municipal.</p>
+    <br>
+        <p>Ao receber a resposta do seu e-mail, realizar o acompanhamento do seu processo no
+            REGIN <b>(Acompanhamento de Andamento de Alvará)</b> através do 
+            <a href="http://www.jucerja.rj.gov.br/tax.juntarj/con_viabilidadeselecaoexterno.aspx">LINK</a>, com o número do protocolo.</p>
+    <br>
+        <p>Para se verificar possível(eis) documento(s) solicitado(s), deve-se clicar em <b>Análise –
+            Alvará e Licenças</b>, depois em <b>Prefeitura Municipal de Duque De Caxias</b> e
+            posteriormente clicar em <b>Fiscalização Tributária</b>.</p>
+    <br>
+        <p>Para a obtenção de taxas, modelos de formulários, caso necessário, e o diploma de alvará,
+            clicar em <b>Visualizar Anexos</b>.</p>
+    <br>
+        <p>Já para se realizar o upload de documentos, clicar em <b>“Sem Resposta”</b>, ao lado da
+            descrição desses, em seguida <b>[Escolher Arquivo]</b>; após selecioná-lo <b>(apenas um de cada vez)</b>,
+            clicar em <b>[Adicionar Arquivo]</b>; adicione tantos arquivos quanto necessários até o máximo de dez
+            (10) e somente clique em <b>[Salvar Arquivos]</b> quando incluir todos eles; <b>mas atenção: clique em
+            [Salvar Arquivos] apenas uma única vez</b>.
+            Após o pagamento das taxas e upload de possíveis documentos solicitados, responder o
+            e-mail ou enviar um novo para alvaraonlinedc@gmail.com</b> e solicitar a análise e liberação do
+            alvará e/ou Inscrição Municipal.</p>
+    </div>
+</div>
+
+    
+<!-- Rodapé -->
+<footer>
+     <div class="footer-content">
+         <div class="footer-section">
+            <h3>OUTROS PORTAIS</h3>
+            <a href="https://duquedecaxias.rj.gov.br/">Prefeitura Municipal de Duque de Caxias</a>
+            <a href="http://www.gov.br/pt-br">Governo Federal</a>
+            <a href="https://www12.senado.leg.br/hpsenado">Senado Federal</a>
+            <a href="https://www.camara.leg.br/">Câmara dos Deputados</a>               
+            <a href="https://www.rj.gov.br/">Governo Estadual</a>
+            <a href="http://www.cmdc.rj.gov.br/?page_id=7592">Leis Municipais</a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/">Portal Transparência</a>
+        </div>
+        <div class="footer-section">
+             <h3>FALE CONOSCO</h3>
+             <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                 <p>plantaofiscal.sefazplan@duquedecaxias.rj.gov.br</p>
+              </div>
+               <div class="contact-item">
+                   <i class="fas fa-map-marker-alt" style="font-size: 16px !important; width: 16px; height: 16px;"></i>
+                   <p>Praça Roberto da Silveira, 31 - Térreo<br>Jardim 25 de Agosto, Duque de Caxias/RJ</p>
+             </div>
+             <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                 <p>Segunda à Sexta, 9h - 17h</p>
+              </div>
+           </div>
+      </div>
+      <div class="institutional-footer">
+           <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
+           <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
+       </div>
+       <div class="development-credits">
+        <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia.</p>
+       </div>
+ </footer>
+
+    <script>
+        function filterOptions() {
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll('.option-card');
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-search').toLowerCase();
+                if (searchData.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
