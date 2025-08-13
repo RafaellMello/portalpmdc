@@ -1,90 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <!-- Desenvolvido por -->
+         <!-- Rafael Mello (github/RafaelLMello) -->
+          <!-- e Enzo Suzula (github/suzulaenzo) -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PMDC - Alvará - Procedimento</title>
+        
+        <title>PMDC - Alvará Procedimento</title>
+        
+        <style>
+            @font-face {
+                font-family: 'AaltoSansEssentialLight';
+                src: url('AaltoSansEssential.ttf') format('truetype');
+                font-display: swap;
+            }
+
+            .option-card {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .option-card a.process-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: inherit;
+                z-index: 1;
+            }
+
+            .option-card i {
+                position: relative;
+                z-index: 2;
+            }
+
+            .option-card h2 {
+                position: relative;
+                z-index: 2;
+            }
+
+            .menu-header {
+                height: 0px !important; /* ou o tamanho que quiser */
+            }
+
+            .menu-header h2 {
+                margin-top: -20px; /* ou um valor negativo, tipo -5px para subir mais */
+            }
+
+            @media (max-width: 600px) {
+                .text-content-after-cards {
+                    padding: 10px;
+                    font-size: 15px;
+                    word-break: break-word;
+                    box-sizing: border-box;
+                    width: 100%;
+                    max-width: 100vw;
+                    overflow-x: hidden;
+                }
+                .text-content-after-cards h4,
+                .text-content-after-cards p,
+                .text-content-after-cards ul,
+                .text-content-after-cards li {
+                    word-break: break-word;
+                    overflow-wrap: break-word;
+                    font-size: 15px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    max-width: 100vw;
+                }
+                body {
+                    margin: 0;
+                    padding: 0;
+                    width: 100vw;
+                    overflow-x: hidden;
+                }
+            }
+            a {
+                color: #2980b9;
+                text-decoration: none; /* Remover sublinhado */
+            }
+        </style>
+        
+          <!-- Open Graph (Facebook, LinkedIn etc) -->
+        <meta property="og:title" content="PMDC - Portal do Contribuinte" />
+        <meta property="og:description" content="Portal do Contribuinte: Sua plataforma para acompanhar tributos, consultas e serviços públicos de forma prática e segura." />
+        <meta property="og:image" content="https://portalpmdc.vercel.app/img/secfazenda.png" />
+        <meta property="og:url" content="https://portalpmdc.vercel.app/" />
+        <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PMDC - Portal do Contribuinte" />
+        <meta name="twitter:description" content="Portal do Contribuinte: Sua plataforma para acompanhar tributos, consultas e serviços públicos de forma prática e segura." />
+        <meta name="twitter:image" content="https://portalpmdc.vercel.app/img/secfazenda.png" />
+        
         <link rel="icon" type="image/png" href="img/favicon.png">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <script src="https://vilibras.gov.br/app/vilibras.js"></script>
-        <div id="vlibras">
-            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        </div>
     </head>
 <body>
-    <style>
-  .grid-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 20px;
-    align-items: flex-start;
-    margin-left: 275px;
-    font-family: sans-serif;
-    max-width: 800px;
-    line-height: 1.6;
-  }
-
-  .grid-container h3 {
-    background: #ffffff;
-    padding: 17px;
-    border-radius: 8px;
-    text-align: justify;
-    width: 100%;
-  }
-
-  .grid-container ul {
-    background: #ffffff;
-    padding: 17px 30px;
-    border-radius: 8px;
-    margin: 0;
-    width: 100%;
-    list-style-type: disc;
-  }
-
-  .grid-container li {
-    margin-bottom: 8px;
-    text-align: justify;
-  }
-
-  .grid-container a {
-    color: #0077cc;
-    text-decoration: none;
-  }
-
-  .grid-container a:hover {
-    text-decoration: underline;
-  }
-
-  .menu-header {
-                height: 75px !important; 
-    }
-
-    .menu-header h2 {
-                margin-top: -0px; 
-    }
-.side-menu {
-            height: 513px;
-            top: 313px;
-        }
-</style>
 
     <nav class="main-menu">
         <img src="img/logonova.png" alt="Logo Duque de Caxias" class="logo">
 
         <div class="menu-links">
-            <a href="sitee.html">Página Inicial</a>
+            <a href="index.html">Página Inicial</a>
             <a href="sitelegislacao.html">Legislação</a>
-            <a href="https://1drv.ms/f/s!Anwatyi83Jk34VQJZ3SycVtGvVH9?e=fTERjF">Formulários</a> 
-            <a href="https://transparencia.duquedecaxias.rj.gov.br/">Perguntas Frequentes</a>
-            <a href="https://sistema.ouvidorias.gov.br/publico/RJ/Duquedecaxias/Manifestacao/RegistrarManifestacao">Fale conosco</a>
+            <a href="siteformularios.html">Formulários</a> 
+            <a href="siteplantaofiscal.html">Perguntas Frequentes</a>
+            <a href="siteplantaofiscal.html">Fale conosco</a>
         </div>
     </nav>
 
     <div class="page-title">
         <h1>Alvará - Procedimento</h1>
+
     </div>
 
     <div class="search-container">
@@ -95,129 +135,81 @@
             </button>
         </form>
     </div>
-<!-- Grid de cards -->
-<div class="grid-container" id="optionsGrid">
 
-        <h2>Passo a Passo para obter o Alvará Online:</h2>
-  <ul>
-    <li>Acesse o endereço: <a href="http://www.jucerja.rj.gov.br/Servicos/regin/ReginServicosCadastrar" target="_blank">http://www.jucerja.rj.gov.br/Servicos/regin/ReginServicosCadastrar</a></li>
-    <li><strong>Observação:</strong> Desative o bloqueador de pop-ups antes de acessar.</li>
-    <li>Faça o login com seus dados de acesso.</li>
-    <li>Clique na opção <strong>"Pedido de Viabilidade REGIN"</strong>.</li>
-    <li>Anote o número do protocolo gerado.</li>
-    <li>Preencha o formulário de comunicação à Prefeitura através do seguinte link: <a href="#">Clique Aqui</a></li>
-  </ul>
+
+    
+      <div class="text-content-after-cards">
+        <h2>Empresas em geral:</h2>
+          
+      <ul>
+         <li>Realizar registro em <a href="http://www.jucerja.rj.gov.br/Servicos/regin/ReginServicosCadastrar">JUCERJA/CARTÓRIO</a>.</li>
+         <li>Enviar um e-mail com o título “Análise de Alvará” para <strong>alvaraonlinedc@gmail.com</strong> com o protocolo numérico (Web) do registro do respectivo instrumento na JUCERJA/Cartório, informando o CNPJ (Não serve a viabilidade de inscrição/alteração).</li>
+         <li>Aguardar a resposta.</li>
+      </ul>
+      
+      <h2>Passo a Passo para obter o Alvará Online:</h2>
+    <ul>
+        <li><a href="pdfs/Alvará/Passo a passo Alvará Online DC.pdf">Clique aqui</a> para acessar o passo a passo!</li>
+    </ul>
+
+
+    </div>
 </div>
 
-
-
-</div>
-
-    <hr class="section-divider">
-
-    <div class="text-content-after-cards">
-        <p>O Alvará de Funcionamento é um documento essencial emitido pela Prefeitura, que atesta a regularidade e a permissão para que uma empresa ou atividade comercial possa operar em um determinado local. Este documento é crucial para garantir que o estabelecimento cumpra todas as normas de segurança, saúde e zoneamento urbano.</p>
-        <br>
-        <h4>Procedimento para Obtenção do Alvará</h4>
-        <p>Para obter o Alvará de Funcionamento, o processo geralmente envolve várias etapas, incluindo a consulta de viabilidade, a apresentação de documentos como contrato social, comprovante de endereço, e a análise de conformidade com as regulamentações municipais. É fundamental seguir cada passo cuidadosamente para evitar atrasos e garantir a aprovação. Acesse o <a href="alvaraprocedimento.html">link de procedimento</a> para mais detalhes.</p>
-        <br>
-        <h4>Importância da Regularização</h4>
-        <p>Manter o Alvará de Funcionamento em dia é de extrema importância para a legalidade do seu negócio. A ausência ou a irregularidade deste documento pode acarretar multas, interdições e até mesmo o fechamento do estabelecimento. A regularização do alvará não apenas evita problemas legais, mas também demonstra o compromisso da empresa com a segurança e a organização do município.</p>
-        <br>
-        <p>Consulte sempre a legislação local e os canais de atendimento da prefeitura para obter informações detalhadas sobre os requisitos específicos para o seu tipo de negócio e os prazos de renovação. Garanta a segurança jurídica da sua operação e contribua para o desenvolvimento ordenado da cidade.</p>
-    </div>
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>CONTEÚDOS</h3>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/ata-registro-preco.php">Ata Registro de Preço</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/autarquias.php">Autarquias</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/portal/index.php/transparencia?id=62">Cadastro de Fornecedores</a>
-                <a href="https://saude.duquedecaxias.rj.gov.br/regulacao-saude.php">Central de Regulação Saúde</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/fundos-municipais.php?conteudo=6339">Conselho Municipal de Saúde</a>
-                <a href="https://portaldatransparencia.gov.br/localidades/3301702-duque-de-caxias">Conv. Governo Federal</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/dados_abertos.php">Dados Abertos</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/despesas.php">Despesas</a>
-                <a href="#">Despesas com recursos da CEDAE</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/divida-ativa.php">Dívida Ativa</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/escolas-municipais.php">Escolas Municipais</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/estatisticas-de-acesso.php">Estatísticas de Acesso</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/fundos-municipais.php">Fundos Municipais</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/gastos-diarias.php">Gastos com Diárias</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/normativos.php">Leis de Acesso a Informação</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/lgpd.php">LGPD</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/licitacoes.php">Licitações</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/obras-publicas.php">Obras Públicas</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/orcamento.php">Orçamento</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/ouvidoria.php">Ouvidoria</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/patrimonios.php">Patrimônios</a>
-                <a href="https://drive.google.com/drive/folders/1hCABUqbobnUe7A9bq3EW3NbbeYYi5KiN?usp=sharing">PDDE</a>
-                <a href="https://leismunicipais.com.br/prefeitura/rj/duquedecaxias">Pesquisas de Leis</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/prestacao-de-contas.php">Prestação de Contas</a>
-                <a href="https://radardatransparencia.atricon.org.br/radar-da-transparencia-publica.html">Radar da Transparência</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/receitas.php">Receitas</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/recursos-financeiros.php">Recursos Financeiros</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/relatorios-lrf.php">Relatórios-LRF</a>
-                <a href="https://fpg.duquedecaxias.rj.gov.br/fpg5/openform.do?sys=FPG&action=openform&formID=8808">Rem. dos Servidores</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/siafic.php">SIAFIC - DECRETO FEDERAL 10.540/20</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/termos-contratos.php">Termos e Contratos</a>
-                <a href="https://transparencia.duquedecaxias.rj.gov.br/unidades-saude.php">Unidades de Saúde</a>
-            </div>
-            <div class="footer-section">
-                <h3>OUTROS PORTAIS</h3>
-                <a href="http://www.portaltransparencia.gov.br/">Governo Federal</a>
-                <a href="http://www.senado.gov.br/transparencia/">Senado</a>
-                <a href="http://www2.camara.leg.br/transparencia/a-transparencia-na-camara">Câmara Federal</a>
-                <a href="http://www.rj.gov.br/web/informacaopublica/">Governo Estadual</a>
-                <a href="http://www.cmdc.rj.gov.br/?page_id=7592">Leis Municipais</a>
-            </div>
-            <div class="footer-section">
-                <h3>FALE CONOSCO</h3>
-
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>plantaofiscal.sefazplan@duquedecaxias.rj.gov.br</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Praça Roberto da Silveira, 31 - Térreo<br>Jardim 25 de Agosto, Duque de Caxias/RJ</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                  <p>Segunda - Sexta, 9h - 17h</p>
-                    </div>
-                </div>
-            </div>
+    
+<!-- Rodapé -->
+<footer>
+     <div class="footer-content">
+         <div class="footer-section">
+            <h3>OUTROS PORTAIS</h3>
+            <a href="https://duquedecaxias.rj.gov.br/">Prefeitura Municipal de Duque de Caxias</a>
+            <a href="http://www.gov.br/pt-br">Governo Federal</a>
+            <a href="https://www12.senado.leg.br/hpsenado">Senado Federal</a>
+            <a href="https://www.camara.leg.br/">Câmara dos Deputados</a>               
+            <a href="https://www.rj.gov.br/">Governo Estadual</a>
+            <a href="http://www.cmdc.rj.gov.br/?page_id=7592">Leis Municipais</a>
+            <a href="https://transparencia.duquedecaxias.rj.gov.br/">Portal Transparência</a>
         </div>
-
-        <div class="institutional-footer">
-            <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
-            <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
-        </div>
-
-        <div class="development-credits">
-            <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia.</p>
-        </div>
-    </footer>
-
-    <script src="script/pesquisa.js"></script>
-    <script src="script/scriptdealtocontraste.js"></script>
-
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-            <div class="vw-access-target"></div>
-        </div>
-    </div>
+        <div class="footer-section">
+             <h3>FALE CONOSCO</h3>
+             <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                 <p>plantaofiscal.sefazplan@duquedecaxias.rj.gov.br</p>
+              </div>
+               <div class="contact-item">
+                   <i class="fas fa-map-marker-alt" style="font-size: 16px !important; width: 16px; height: 16px;"></i>
+                   <p>Praça Roberto da Silveira, 31 - Térreo<br>Jardim 25 de Agosto, Duque de Caxias/RJ</p>
+             </div>
+             <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                 <p>Segunda à Sexta, 9h - 17h</p>
+              </div>
+           </div>
+      </div>
+      <div class="institutional-footer">
+           <p>Sede da Prefeitura Municipal de Duque de Caxias - Alameda Esmeralda 206, JD. Primavera, Duque de Caxias / RJ</p>
+           <p>CEP: 25215-260 - TEL: (21) 2773-6200 CNPJ: 29.138.328/0001-50</p>
+       </div>
+       <div class="development-credits">
+        <p>Desenvolvido pela: Secretaria de Fazenda / Subsecretaria de Tecnologia.</p>
+       </div>
+ </footer>
 
     <script>
-        new window.VLibras.Widget();
+        function filterOptions() {
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll('.option-card');
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-search').toLowerCase();
+                if (searchData.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
     </script>
 </body>
 </html>
-
